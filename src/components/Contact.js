@@ -9,6 +9,7 @@ import MailOutline from "@mui/icons-material/MailOutline";
 export default function Contact() {
   return (
     <div className="h-screen w-screen  bg-pink-700">
+      {/* make this text translate */}
       <div id="contact" className="text-8xl font-zidan top-0 left-0 ">
         Contact
         <div
