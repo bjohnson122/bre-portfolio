@@ -95,7 +95,7 @@ function Navbar() {
           return (
             <li key={idx}>
               <a
-                className="text-[0.6rem]  block"
+                className="text-[0.6rem] pt-4 block"
                 href={socialSite.webLink}
                 target="_blank"
                 rel="noopener noreferrer"
