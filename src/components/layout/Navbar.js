@@ -83,7 +83,7 @@ function Navbar() {
     <div
       className={`fixed 
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
-      flex w-screen list-none p-3 h-14 pt-0 bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed z-50`}
+      flex w-screen list-none p-3 h-14 align-center bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed z-50`}
     >
       {/* Left side of navbar w/ page links */}
       <span
@@ -95,7 +95,7 @@ function Navbar() {
           return (
             <li key={idx}>
               <a
-                className="text-[0.6rem] pt-4 block"
+                className="text-[0.6rem]  block"
                 href={socialSite.webLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -110,7 +110,7 @@ function Navbar() {
 
       {/* Logo */}
       <span
-        className="md:text-2xl md:text-center md:cursor-pointer font-zidan text-left text-blue-800 w-1/2"
+        className="text-2xl md:text-2xl md:text-center md:cursor-pointer font-zidan text-left text-blue-800 w-1/2"
         onClick={() => {
           window.scrollTo(0, 0);
         }}
