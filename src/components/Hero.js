@@ -11,7 +11,7 @@ export default function Hero() {
   const router = useRouter();
 
   return (
-    <div className=" bg-red-100 relative h-screen">
+    <div className="mt-14 md:mt-0 bg-red-100 relative h-screen">
       <div className="text-center text-xl flex">
         <p className="mt-0 pr-1">Hi, my name is Breana and I am </p>
         {/* typewriter */}
