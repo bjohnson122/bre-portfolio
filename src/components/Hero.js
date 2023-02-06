@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Typewriter from "typewriter-effect";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { useRouter } from "next/navigation";
@@ -9,13 +9,14 @@ import { Suspense } from "react";
 
 export default function Hero() {
   const router = useRouter();
+  const [isNavShowing, setIsNavShowing]= useState()
 
   return (
-    <div className="mt-14 md:mt-0 bg-red-100 relative h-screen">
-      <div className="text-center text-xl flex">
-        <p className="mt-0 pr-1">Hi, my name is Breana and I am </p>
+    <div className="text-center bg-red-100 relative h-screen pt-14">
+      <p className="mt-0 pr-1 ">Hi, my name is Breana and I am </p> <div className="text-center text-xl flex">
+       
         {/* typewriter */}
-        <div className="font-raleway text-left text-xl">
+        <div className="font-raleway text-center text-xl">
           <Typewriter
             options={{ loop: true }}
             onInit={(typewriter) => {
@@ -37,7 +38,7 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="animate-bounce text-[0.6rem] w-full cursor-default scroll-smooth absolute bottom-10 right-0 text-center">
+      <div className="animate-bounce text-[0.6rem] w-full cursor-default scroll-smooth absolute md:bottom-10 right-0 text-center bottom-[5rem]">
         Scroll Down
         <br />
         <span className="scroll-smooth" onClick={() => router.push("/#about")}>
