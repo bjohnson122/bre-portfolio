@@ -82,7 +82,7 @@ function Navbar() {
 
   return (
     <div
-      className={`${counter < 2 ? "sm:hidden" : "sm:show"} fixed
+      className={`${counter < 2 ? "sm:show" : "sm:show"} fixed
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
       flex w-screen list-none p-3 h-10 md:h-14 align-center bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed z-50 `}
     >
@@ -120,16 +120,16 @@ function Navbar() {
       </span>
 
       {/* Right side of navbar w/ page links */}
-      <span className="hidden md:w-1/4 md:flex md:justify-around scroll-smooth text-md">
+      <span className="hidden md:w-1/4 md:flex md:justify-around scroll-smooth text-md align-middle">
         {links.map((link, idx) => {
           return (
-            <li className="md:border-b-0" key={idx}>
+            <li className="md:pt-1" key={idx}>
               <a href={link.href}>{link.title}</a>
             </li>
           );
         })}
 
-        <button onClick={() => setDarkMode(!darkMode)} className="">
+        <button onClick={() => setDarkMode(!darkMode)} className="text-2xl">
           {darkMode ? (
             <LightModeOutlinedIcon className=" text-center pb-1" />
           ) : (

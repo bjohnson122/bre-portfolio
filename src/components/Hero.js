@@ -12,11 +12,11 @@ export default function Hero() {
   const [isNavShowing, setIsNavShowing]= useState()
 
   return (
-    <div className="text-center bg-red-100 relative h-screen pt-14">
-      <p className="mt-0 pr-1 ">Hi, my name is Breana and I am </p> <div className="text-center text-xl flex">
+    <div className="text-center bg-red-100 relative h-screen pt-14 md:pt-3">
+      <p className="mt-0 text-xl">Hi, my name is Breana and I am </p> <div className="text-center text-xl flex">
        
         {/* typewriter */}
-        <div className="font-raleway text-center text-xl">
+        <div className="font-raleway text-center text-xl justify-center items-center align-middle w-screen">
           <Typewriter
             options={{ loop: true }}
             onInit={(typewriter) => {
@@ -38,7 +38,7 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="animate-bounce text-[0.6rem] w-full cursor-default scroll-smooth absolute md:bottom-10 right-0 text-center bottom-[5rem]">
+      <div className="animate-bounce text-[0.6rem] w-full cursor-default scroll-smooth absolute md:bottom-15 right-0 text-center bottom-[5rem]">
         Scroll Down
         <br />
         <span className="scroll-smooth" onClick={() => router.push("/#about")}>
