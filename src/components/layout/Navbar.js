@@ -111,7 +111,7 @@ function Navbar() {
 
       {/* Logo */}
       <span
-        className="text-2xl md:text-2xl md:text-center md:cursor-pointer font-zidan text-left text-blue-800 w-1/2"
+        className="text-[1.35rem] md:text-2xl md:text-center md:cursor-pointer font-zidan text-left text-blue-800 w-1/2"
         onClick={() => {
           window.scrollTo(0, 0);
         }}
