@@ -14,6 +14,7 @@ import redux from "/public/icons/redux.png";
 import tailwind from "/public/icons/Tailwind.svg.png";
 import git from 'public/icons/Git.png'
 import SkillsIcon from "./SkillsIcon";
+import spline from 'public/icons/spline.png'
 
 const skills = [
   { src: html, text: "HTML" },
@@ -29,13 +30,15 @@ const skills = [
   { src: firebase, text: "Firebase" },
   { src: git, text: "Git" },
   { src: procreate, text: "Procreate" },
+  { src: spline, text: "Spline" },
+
   
 ];
 
 export default function Skills() {
   return (
     <div>
-      <p>Hi there! I&apos;m Breana.</p> More of my about info will go here :)
+      <p>My technical journey started when I was awarded a highly-competitive fellowship offered by NYC and Fullstack Academy in 2022.</p>
       <br />
       <div className="relative flex py-5 items-center">
         <div className="flex-grow border-t border-gray-500 mt-20"></div>
@@ -44,7 +47,7 @@ export default function Skills() {
       </div>
 
 {/* m-auto md:flex-shrink relative flex md:flex-row flex-col items-center gap-4 overflow-hidden */}
-      <div className="mt-2 flex justify-center relative flex-wrap gap-4 overflow-hidden">
+      <div className="mt-2 flex p-8 justify-center relative flex-wrap gap-4 overflow-hidden">
         {skills.map((skill, idx) => {
           return <SkillsIcon src={skill.src} alt={skill.text} key={idx} />;
         })}

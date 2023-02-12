@@ -6,7 +6,7 @@ const name = "Breana Johnson";
 const defaultDescription =
   "Breana Johnson is a full-stack software engineer and UX/UI enthusiast.";
 
-function Meta({ title = "Designer and Developer", description }) {
+function Meta({ title = "Developer and Designer", description }) {
   const titleText = [name, title].filter(Boolean).join(" | ");
   return (
     <Head>
