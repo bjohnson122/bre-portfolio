@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <div id='about' className='text-center text-xl pt-12 '>
+    <div id='about' className='text-center text-xl h-screen bg-pink-400'>
       <Skills/>
       <br />
       </div>

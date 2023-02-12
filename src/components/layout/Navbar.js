@@ -48,6 +48,7 @@ const socials = [
 ];
 
 let counter = 0;
+
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState(null);
 
@@ -82,7 +83,7 @@ function Navbar() {
 
   return (
     <div
-      className={`${counter < 2 ? "sm:show" : "sm:show"} fixed
+      className={`${counter < 2 ? "md:hidden" : "md:show"} fixed
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
       flex w-screen list-none p-3 h-10 md:h-14 align-center bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed z-50 `}
     >
@@ -129,9 +130,9 @@ function Navbar() {
           );
         })}
 
-        <button onClick={() => setDarkMode(!darkMode)} className="text-2xl">
+        <button onClick={() => setDarkMode(!darkMode)} className="scale-75 pt-1">
           {darkMode ? (
-            <LightModeOutlinedIcon className=" text-center pb-1" />
+            <LightModeOutlinedIcon />
           ) : (
             <DarkModeIcon />
           )}
