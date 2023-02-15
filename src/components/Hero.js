@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Typewriter from "typewriter-effect";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { useRouter } from "next/navigation";
-import pic from "/public/Mini Room - Bre@2-725x473.png";
+// import pic from "/public/Mini Room - Bre@2-725x473.png";
 import Image from "next/image";
 import Spline from "@splinetool/react-spline";
 import { Suspense } from "react";

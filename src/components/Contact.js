@@ -10,10 +10,10 @@ export default function Contact() {
   return (
     <div className="h-screen w-screen  bg-pink-700">
       {/* make this text translate */}
-      <div id="contact" className="text-8xl font-zidan top-0 left-0 ">
+      <div id="contact" className="text-8xl font-zidan top-0 left-0 p-4">
         Contact
         <div
-          className="flex bottom-0 right-0 justify-center scale-[2.0] space-x-11 z-50 text-indigo-700
+          className="flex bottom-0 right-0 justify-center scale-[2.0] space-x-10 z-50 text-indigo-700
    "
         >
           <LinkedIn />
