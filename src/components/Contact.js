@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
-import Article from "@mui/icons-material/Article";
 import MailOutline from "@mui/icons-material/MailOutline";
 import {
   motion,
@@ -10,6 +9,7 @@ import {
   useInView,
   useSpring,
 } from "framer-motion";
+
 
 export default function Contact() {
   const { scrollYProgress } = useScroll();
@@ -28,27 +28,51 @@ export default function Contact() {
   }, [isInView]);
 
   return (
-    <div className="h-[80vh] w-screen overflow-hidden" id="contact" ref={ref}>
+    <div
+      className="h-[80vh] w-screen overflow-hidden"
+      id="contact"
+      ref={ref}
+    >
       {/* TRANSLATE TEXT ON X AXIS */}
 
       {isInView && (
         <motion.div
           style={{ x }}
-          className="w-screen font-zidan tracking-[.075em] md:text-[12rem] md:absolute md:mt-[22vh] opacity-[30%] text-[#525252] md:pl-7 text-center overflow-hidden
-        "
+          className="w-screen font-zidan text-center  mt-32 tracking-[.085em] text-[4rem] sm:text-[7.75rem] sm:absolute sm:opacity-20 sm:text-[#525252] md:text-[12rem] md:mt-[22vh]  md:opacity-[30%]md:pl-7"
         >
           Contact
         </motion.div>
       )}
+      <div className="text-center text-sm pt-2 sm:hidden">
+        I&apos;d love to hear from you!
+      </div>
 
       {/* SOCIAL ICONS */}
       <div
-        className="text-center scale-[3.2] space-x-10 z-50 text-black md:mt-72 overflow-visible
-   "
+        className="scale-[2.7] mt-12 p-4 z-50 text-black space-x-5 text-center sm:scale-[2.5] sm:mt-[12.5rem] 
+        md:scale-[3.2] md:space-x-10  md:mt-72"
       >
-        <LinkedIn />
-        <MailOutline />
-        <GitHub />
+        <a
+          href="https://www.linkedin.com/in/breanaj/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedIn />
+        </a>
+        <a
+          href="mailto:brecjohnson@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <MailOutline />
+        </a>
+        <a
+          href="https://github.com/bjohnson122/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GitHub />
+        </a>
       </div>
     </div>
   );
