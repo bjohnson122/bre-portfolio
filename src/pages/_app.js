@@ -11,22 +11,13 @@ import { useRouter } from "next/router";
 // import { Canvas } from "@react-three/fiber";
 // import { OrbitControls } from '@react-three/drei';
 
-const repoPrompt = `
-───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───
-───█▒▒░░░░░░░░░▒▒█───
-────█░░█░░░░░█░░█────
-─▄▄──█░░░▀█▀░░░█──▄▄─
-█░░█─▀▄░░░░░░░▄▀─█░░█
 
-Taking a peek huh? Check out the source code: https://github.com/bjohnson122/bre-portfolio
-`;
- 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const path = router.pathname;
 
-  const Spline = React.lazy(() => import('@splinetool/react-spline'));
+  // const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 
 
@@ -45,10 +36,6 @@ export default function App({ Component, pageProps }) {
     return () => {
       clearTimeout(loadDuration);
     };
-  }, []);
-
-  useEffect(() => {
-    console.info(`${repoPrompt}\n\n`);
   }, []);
 
   return (
