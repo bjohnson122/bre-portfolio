@@ -65,13 +65,13 @@ export default function Skills() {
 
       {/* ICONS */}
 
-      <div className="">
+      <div>
         <span
-          className=" grid grid-cols-7 gap-1  grid-rows-2 mx-2 items-center justify-center 
+          className=" grid grid-cols-7 gap-1  grid-rows-2 mx-2 items-center justify-center
           
-          sm:grid sm:gap-4 sm:mx-[10%] sm:grid-cols-7 sm:grid-rows-2 sm:px-8 sm:scale-100
+          sm:grid sm:gap-4 sm:mx-[10%] sm:grid-cols-7 sm:grid-rows-2 sm:px-8 
         
-          md:mx-5"
+          md:mx-5 space-y-2"
         >
           {skills.map((skill, idx) => {
             return <SkillsIcon src={skill.src} alt={skill.text} key={idx} />;
