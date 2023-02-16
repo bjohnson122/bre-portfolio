@@ -23,10 +23,6 @@ export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
-
   return (
     <div
       className="h-[80vh] w-screen overflow-hidden"
