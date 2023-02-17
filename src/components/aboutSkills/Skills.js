@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link'
 import html from "/public/icons/html.png";
 import css from "/public/icons/css.png";
 import procreate from "/public/icons/procreate.png";
@@ -14,6 +15,7 @@ import tailwind from "/public/icons/Tailwind.svg.png";
 import git from "public/icons/Git.png";
 import SkillsIcon from "./SkillsIcon";
 import spline from "public/icons/spline.png";
+import AboutInfo from "./AboutInfo";
 
 const skills = [
   { src: html, text: "HTML" },
@@ -32,27 +34,14 @@ const skills = [
   { src: spline, text: "Spline" },
 ];
 
-const test = [
-  { src: firebase, text: "Firebase" },
-  { src: git, text: "Git" },
-  { src: procreate, text: "Procreate" },
-  { src: spline, text: "Spline" },
-];
+
+const text = skills.map(skill => skill.text)
 
 export default function Skills() {
+  // 
   return (
-    <div className="h-full w-screen p-2 pt-14 ">
-      <p className="px-8">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-        ever since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing
-      </p>
-      <br />
+    <div className="h-screen w-screen p-2 pt-14 ">
+     
 
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
@@ -67,16 +56,22 @@ export default function Skills() {
 
       <div>
         <span
-          className=" grid grid-cols-7 gap-1  grid-rows-2 mx-2 items-center justify-center
+          className=" grid grid-cols-7 gap-1  grid-rows-2 mx-2 items-center justify-center md:py-8
           
           sm:grid sm:gap-4 sm:mx-[10%] sm:grid-cols-7 sm:grid-rows-2 sm:px-8 
         
-          md:mx-5 space-y-2"
+          md:mx-5 md:pl-[85px] space-y-2
+          "
         >
           {skills.map((skill, idx) => {
-            return <SkillsIcon src={skill.src} alt={skill.text} key={idx} />;
+            return <SkillsIcon src={skill.src} alt={skill.text} key={idx}  className='hover:opacity-50'/>;
           })}
         </span>
+        <br/>
+        <AboutInfo/>
+        <br/>
+        {/* UPDATE WITH WORKING LINK!!! */}
+        <Link href='/transferrable-skills'><p className='text-center pt-5 mt-[1rem] text-sm underline'>Checkout my non-technical portfolio and  transferable skills here!</p></Link>
       </div>
     </div>
   );

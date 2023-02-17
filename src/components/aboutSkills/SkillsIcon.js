@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function SkillsIcon({ src, alt }) {
   return (
-    <div >
+    <div className=''>
       <Image src={src} alt={alt} height={90} />
     </div>
   );
