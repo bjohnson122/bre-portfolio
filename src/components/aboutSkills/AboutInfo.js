@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const skillsList = [
   "Javascript (including Redux, React, Next.JS, and Gatsby)",
