@@ -15,7 +15,8 @@ import tailwind from "/public/icons/Tailwind.svg.png";
 import git from "public/icons/Git.png";
 import SkillsIcon from "./SkillsIcon";
 import spline from "public/icons/spline.png";
-import AboutInfo from "./AboutInfo";
+import "animate.css";
+
 import {
   motion,
   useScroll,
@@ -52,20 +53,26 @@ const skillsList = [
 
 export default function Skills() {
   const [smallMobile, setSmallMobile] = useState(undefined);
-  const [largerScreens, setLargerScreens] = useState(undefined);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
+let timesSeen = 0
+useEffect(() => {
+  timesSeen++
+})
   useEffect(() => {
     const updateMobile = () => {
       setSmallMobile(
         window.innerWidth > 389 && window.innerWidth <= 475 ? true : false
       );
     };
-
+ 
     updateMobile();
     window.addEventListener("resize", updateMobile);
     return () => {
       window.removeEventListener("resize", updateMobile);
     };
+  
   }, []);
 
   return (
@@ -88,7 +95,7 @@ export default function Skills() {
           sm:grid sm:gap-4 sm:mx-[10%] sm:grid-cols-7 sm:grid-rows-2 sm:px-8 
         
           md:mx-5 md:pl-[85px] space-y-2 md:py-8
-          "
+"
         >
           {skills.map((skill, idx) => {
             return (
@@ -105,9 +112,7 @@ export default function Skills() {
 
         {/* skills list */}
         {smallMobile ? (
-          <div
-            className="text-[.8rem] list-outside items-center justify-center px-2 mx-[1%] pl-[2.5%] mt-4"
-          >
+          <div className="text-[.8rem] list-outside items-center justify-center px-2 mx-[1%] pl-[2.5%] mt-4">
             {skillsList.map((skill, idx) => {
               return (
                 <li key={idx} className="py-1">
@@ -118,16 +123,16 @@ export default function Skills() {
           </div>
         ) : (
           <div
-            className=" sm:w-screen text-[.65rem] list-outside items-center justify-center px-2 mx-[1%] pl-[2.5%] mt-4
-              xs:mx-[5%]       xs:text-[.9rem]
-
-              sm:grid sm:grid-cols-2 sm:grid-rows-3 
-              sm: sm:gap-x-2
+            className="w-screen  text-[0.50rem] list-outside items-center justify-center px-2 mx-[1%] pl-[2.5%] mt-3
+              xs:mx-[5%] xs:text-[.9rem]
+             
+              sm:flex-col sm:text-xs sm:ml-[5%] sm:w-[70%]
+             
+              md:grid md:grid-cols-2 md:gap-x-3 md:grid-rows-3 md:w-screen md:text-[0.9rem] md:ml-[3%] 
 
               lg:text-[.8rem] lg:w-[76%] lg:ml-[12%] lg:gap-x-6 lg:pl-[4%] lg:-pr-[5%]
 
-              xl:text-base
-              "
+              xl:text-base"
           >
             {skillsList.map((skill, idx) => {
               return (
@@ -139,14 +144,21 @@ export default function Skills() {
           </div>
         )}
         <br />
-
-
-        {/* UPDATE WITH WORKING LINK!!! */}
-        <Link href="/transferrable-skills">
-          <p className="text-center  mt-[1rem] text-sm underline">
-            Checkout my non-technical portfolio and transferable skills here!
-          </p>
-        </Link>
+      
+        {/* UPDATE WITH WORKING LINK & button !!! */}
+        <div className="items-center text-center pt-4" ref={ref}>
+          <Link href="/transferrable-skills">
+            {isInView && (
+              <button
+                className={`rounded-full bg-gray-800 text-white p-1 px-2 ${'animate__animated animate__headShake'} xs:text-xs sm:text-sm text-[.55rem]`}
+                ref={ref} 
+              >
+                Checkout my non-technical portfolio and transferable skills
+                here!
+              </button>
+            )}
+          </Link>
+        </div>
       </div>
     </div>
   );

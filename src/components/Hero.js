@@ -12,7 +12,7 @@ export default function Hero() {
   const [isNavShowing, setIsNavShowing]= useState()
 
   return (
-    <div className="text-center bg-red-100 relative h-screen pt-14 md:pt-3">
+    <div className="text-center bg-orange-50 relative h-screen pt-14 md:pt-3">
       <p className="mt-0 text-xl">Hi, my name is Breana and I am </p> <div className="text-center text-xl flex">
        
         {/* typewriter */}
