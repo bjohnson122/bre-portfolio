@@ -1,39 +1,39 @@
-import React, { useRef } from "react";
-
-const skillsList = [
-  "Javascript (including Redux, React, Next.JS, and Gatsby)",
-  "CSS (including tailwindCSS, MaterialUI, and Bootstrap)",
-  "Version Control (i.e., Git & GitHub)",
-  "Procreate and Spline (for graphics and 3D design)",
-  "NodeJS (including Express)",
-  "Relational Database Mangement (i.e., PostgreSQL)"
-];
+import React, {useState, useEffect} from "react";
 
 export default function AboutInfo() {
+    const [mobile, setMobile] = useState(undefined)
+    
+    useEffect(() => {
+        const updateMobile = () => {
+          setMobile(window.innerWidth < 520 ? true : false)
+        }
+    
+        updateMobile()
+        window.addEventListener('resize', updateMobile)
+        return () => {
+          window.removeEventListener('resize', updateMobile)
+        }
+      }, [])
+
+
   return (
     <div>
-      {/* mention web dev from scratch & design eye-catching layouts for webpages */}
-      {/* <div><p className="px-8">I am a full-stack software engineer</p></div> */}
       
-
-      {/* skills list */}
-      <div className=" sm:w-screen text-[.65rem] list-outside items-center justify-center px-2 mx-[5%] pl-[2.5%] mt-4
-
-
-      sm:grid sm:grid-cols-2 sm:grid-rows-3 
-      sm: sm:gap-x-3
-      
-      lg:text-[.8rem] lg:w-[76%] lg:ml-[12%] lg:gap-x-6 lg:pl-[4%] lg:-pr-[5%]
-
-      xl:text-base
-      ">
-        {skillsList.map((skill, idx) => { return (
-          <li key={idx} className='py-1'>
-            {skill}
-            </li>
-          )
-        })}
+      {mobile ? (
+      <div>
+        <p className="p-4 text-center text-sm pt-14">
+            I am a full-stack software engineer that specializes in developing enjoyable user experiences. Javascript is my primary superpower as I tackle the world of the web.
+        </p>
       </div>
+      ) : (
+        <div>
+            <p className="p-10 text-center pt-14 md:text-lg lg:text-xl lg:px-20 lg:pt-24 xl:text-2xl xl:px-36">
+            I am a full-stack software engineer that specializes in developing enjoyable user experiences. Javascript is my primary superpower as I tackle the world of the web. I leverage my <span className="underline">artistic and graphic design</span> skills to create simple, beautiful, and intuitive layouts for applications and websites. When I&apos;m not centering divs, you&apos;ll find me painting, drawing, or working out.
+            </p>
+        </div>
+      )}
+
+      
       
     </div>
   );
