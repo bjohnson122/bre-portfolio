@@ -26,7 +26,12 @@ export default function About() {
 
   return (
     <div className="pt-14" ref={ref}>
-      <div  className="font-zidan m-3 ml-12 text-6xl">
+      <div  className="font-zidan text-center text-3xl
+      sm:text-left sm:m-3 sm:ml-12 sm:text-4xl
+      md:text-6xl
+      lg:ml-16
+      
+      ">
         <Slide duration={1200} triggerOnce={true}>  <p>{"<About />"}</p></Slide>
       
       </div  >
