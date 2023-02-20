@@ -56,7 +56,7 @@ const skillsTextAnimation = {
   key: "skills",
   initial: { opacity: 0 },
   animate: { opacity: [0, 0.5, 1] },
-  transition: { delay: 1.5, duration: 2 },
+  transition: { delay: .5, duration: 1.5, repeat: 0 },
 };
 export default function Skills() {
   const [smallMobile, setSmallMobile] = useState(undefined);

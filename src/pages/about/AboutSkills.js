@@ -1,6 +1,8 @@
-import AboutInfo from '@/components/aboutSkills/AboutInfo'
-import Skills from '@/components/aboutSkills/Skills'
-import React from 'react'
+import AboutInfo from "@/components/aboutSkills/AboutInfo";
+import Skills from "@/components/aboutSkills/Skills";
+import React, { useRef } from "react";
+import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 import {
   motion,
@@ -14,21 +16,27 @@ const aboutTitleAnimation = {
   key: "about title",
   initial: { opacity: 0 },
   animate: { opacity: [0, 0.5, 1] },
-  transition: { delay: 1.5, duration: 2.7 },
+  transition: { delay: .5, duration: 1, repeat:0 },
 };
 
 export default function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  console.log(isInView, 'viewing')
+
   return (
-    <div className='pt-14'>
-    <div 
-    {...aboutTitleAnimation}
-    className="font-zidan m-3 ml-12 text-6xl">
-{'<About />'}
-</div>
-    <motion.div id='about' className=''>
-      <AboutInfo />
-      <Skills/>
-      <br />
-      </motion.div></div>
-  )
+    <div className="pt-14" ref={ref}>
+      <div  className="font-zidan m-3 ml-12 text-6xl">
+        <Slide duration={1200} triggerOnce={true}>  <p>{"<About />"}</p></Slide>
+      
+      </div  >
+    <Fade duration={2200} delay={800} triggerOnce={true}>
+        <div {...aboutTitleAnimation} id="about" className=''>
+          <AboutInfo />
+          <Skills />
+          <br />
+        </div></Fade>
+      
+    </div>
+  );
 }
