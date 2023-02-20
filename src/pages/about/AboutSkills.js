@@ -20,12 +20,10 @@ const aboutTitleAnimation = {
 };
 
 export default function About() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  console.log(isInView, 'viewing')
+
 
   return (
-    <div className="pt-14" id="about">
+    <div className="pt-14" id="about ">
       <div  className="font-zidan text-center text-3xl
       sm:text-left sm:m-3 sm:ml-12 sm:text-4xl
       md:text-6xl

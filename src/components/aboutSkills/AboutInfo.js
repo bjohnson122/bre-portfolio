@@ -13,16 +13,8 @@ import {
 export default function AboutInfo() {
     const [mobile, setMobile] = useState(undefined)
 
-    const { scrollYProgress } = useScroll();
 
-  const x = useSpring(useTransform(scrollYProgress, [0, 1], [-1300, 0]), {
-    stiffness: 100,
-    damping: 25,
-    restDelta: 0.001,
-  });
 
-  const ref = useRef(null);
-  const isInView = useInView(ref);
     
     useEffect(() => {
         const updateMobile = () => {
