@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import ButtonLink from "./buttonLink";
 import html from "/public/icons/html.png";
 import css from "/public/icons/css.png";
 import procreate from "/public/icons/procreate.png";
@@ -51,15 +51,21 @@ const skillsList = [
   "Database Management (i.e., PostgreSQL and Sequelize)",
 ];
 
+
+const skillsTextAnimation = {
+  key: "skills",
+  initial: { opacity: 0 },
+  animate: { opacity: [0, 0.5, 1] },
+  transition: { delay: 1.5, duration: 2 },
+};
 export default function Skills() {
   const [smallMobile, setSmallMobile] = useState(undefined);
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const skillText = useRef(null)
 
-let timesSeen = 0
-useEffect(() => {
-  timesSeen++
-})
+
+
   useEffect(() => {
     const updateMobile = () => {
       setSmallMobile(
@@ -76,7 +82,9 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="h-screen w-screen p-2  ">
+    <motion.div 
+    {...skillsTextAnimation}
+    className="h-screen w-screen p-2  ">
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
         <div className="flex-grow border-t border-gray-500 mt-4"></div>
@@ -110,7 +118,7 @@ useEffect(() => {
         </span>
         <br />
 
-        {/* skills list */}
+        {/* SKILLS LIST SMALL DEVICES vs. LARGER MOBILE DEVICES */}
         {smallMobile ? (
           <div className="text-[.8rem] list-outside items-center justify-center px-2 mx-[1%] pl-[2.5%] mt-4">
             {skillsList.map((skill, idx) => {
@@ -146,20 +154,8 @@ useEffect(() => {
         <br />
       
         {/* UPDATE WITH WORKING LINK & button !!! */}
-        <div className="items-center text-center pt-4" ref={ref}>
-          <Link href="/transferrable-skills">
-            {isInView && (
-              <button
-                className={`rounded-full bg-gray-800 text-white p-1 px-2 ${'animate__animated animate__headShake'} xs:text-xs sm:text-sm text-[.55rem]`}
-                ref={ref} 
-              >
-                Checkout my non-technical portfolio and transferable skills
-                here!
-              </button>
-            )}
-          </Link>
-        </div>
+            <ButtonLink />
       </div>
-    </div>
+    </motion.div>
   );
 }
