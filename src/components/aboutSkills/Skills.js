@@ -60,9 +60,7 @@ const skillsTextAnimation = {
 };
 export default function Skills() {
   const [smallMobile, setSmallMobile] = useState(undefined);
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const skillText = useRef(null)
+
 
 
 

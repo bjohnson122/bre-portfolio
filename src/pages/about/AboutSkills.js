@@ -25,7 +25,7 @@ export default function About() {
   console.log(isInView, 'viewing')
 
   return (
-    <div className="pt-14" ref={ref}>
+    <div className="pt-14" id="about">
       <div  className="font-zidan text-center text-3xl
       sm:text-left sm:m-3 sm:ml-12 sm:text-4xl
       md:text-6xl
@@ -36,7 +36,7 @@ export default function About() {
       
       </div  >
     <Fade duration={2200} delay={800} triggerOnce={true}>
-        <div {...aboutTitleAnimation} id="about" className=''>
+        <div>
           <AboutInfo />
           <Skills />
           <br />
