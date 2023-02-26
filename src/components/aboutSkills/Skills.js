@@ -15,7 +15,8 @@ import tailwind from "/public/icons/Tailwind.svg.png";
 import git from "public/icons/Git.png";
 import SkillsIcon from "./SkillsIcon";
 import spline from "public/icons/spline.png";
-import "animate.css";
+import Tilt from 'react-parallax-tilt';
+
 
 import {
   motion,
@@ -60,9 +61,7 @@ const skillsTextAnimation = {
 };
 export default function Skills() {
   const [smallMobile, setSmallMobile] = useState(undefined);
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const skillText = useRef(null)
+
 
 
 
@@ -82,9 +81,10 @@ export default function Skills() {
   }, []);
 
   return (
+    
     <motion.div 
     {...skillsTextAnimation}
-    className="h-screen w-screen p-2  ">
+    className="h-[90vh] w-screen p-2  ">
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
         <div className="flex-grow border-t border-gray-500 mt-4"></div>
@@ -105,6 +105,7 @@ export default function Skills() {
           md:mx-5 md:pl-[85px] space-y-2 md:py-8
 "
         >
+          
           {skills.map((skill, idx) => {
             return (
               <SkillsIcon

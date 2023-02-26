@@ -10,10 +10,10 @@ export default function ButtonLink() {
   return (
     <div>
       <div className="items-center text-center pt-4" ref={ref}>
-        <Link href="/transferrable-skills">
+        <Link href="/transferable">
           {isInView && (
             <button
-              className={`rounded-full bg-gray-800 text-white p-1 px-2 ${"animate__animated animate__headShake"} xs:text-xs sm:text-sm text-[.55rem]`}
+              className={` rounded-full bg-gray-800 text-white p-1 px-2 ${"animate__animated animate__headShake"} xs:text-xs sm:text-sm text-[.55rem]`}
               ref={ref}
             >
               Checkout my non-technical portfolio and transferable skills here!

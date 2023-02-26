@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import Footer from "./Footer";
 import Meta from "./Meta";
+import MobileNav from "./MobileNav";
 import Navbar from "./Navbar";
 
 const repoPrompt = `
@@ -22,6 +23,7 @@ function Layout({ children }) {
     <div className='font-raleway font-normal'>
       <Meta title="Developer and Designer" />
       <Navbar />
+      {/* <MobileNav /> */}
       <main className=" md:flex flex-col overflow-x-hidden">{children}</main>
       <Footer />
     </div>
