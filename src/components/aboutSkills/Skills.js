@@ -15,16 +15,8 @@ import tailwind from "/public/icons/tailwind.png";
 import git from "public/icons/git.png";
 import SkillsIcon from "./SkillsIcon";
 import spline from "public/icons/spline.png";
-import Tilt from 'react-parallax-tilt';
 
-
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useInView,
-  useSpring,
-} from "framer-motion";
+import { motion } from "framer-motion";
 
 const skills = [
   { src: html, text: "HTML" },
@@ -52,18 +44,14 @@ const skillsList = [
   "Database Management (i.e., PostgreSQL and Sequelize)",
 ];
 
-
 const skillsTextAnimation = {
   key: "skills",
   initial: { opacity: 0 },
   animate: { opacity: [0, 0.5, 1] },
-  transition: { delay: .5, duration: 1.5, repeat: 0 },
+  transition: { delay: 0.5, duration: 1.5, repeat: 0 },
 };
 export default function Skills() {
   const [smallMobile, setSmallMobile] = useState(undefined);
-
-
-
 
   useEffect(() => {
     const updateMobile = () => {
@@ -71,20 +59,16 @@ export default function Skills() {
         window.innerWidth > 389 && window.innerWidth <= 475 ? true : false
       );
     };
- 
+
     updateMobile();
     window.addEventListener("resize", updateMobile);
     return () => {
       window.removeEventListener("resize", updateMobile);
     };
-  
   }, []);
 
   return (
-    
-    <motion.div 
-    {...skillsTextAnimation}
-    className="h-[90vh] w-screen p-2  ">
+    <motion.div {...skillsTextAnimation} className="h-[90vh] w-screen p-2  ">
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
         <div className="flex-grow border-t border-gray-500 mt-4"></div>
@@ -105,7 +89,6 @@ export default function Skills() {
           md:mx-5 md:pl-[85px] space-y-2 md:py-8
 "
         >
-          
           {skills.map((skill, idx) => {
             return (
               <SkillsIcon
@@ -153,9 +136,9 @@ export default function Skills() {
           </div>
         )}
         <br />
-      
+
         {/* UPDATE WITH WORKING LINK & button !!! */}
-            <ButtonLink />
+        <ButtonLink />
       </div>
     </motion.div>
   );
