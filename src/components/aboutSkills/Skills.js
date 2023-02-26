@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import ButtonLink from "./buttonLink";
+import ButtonLink from "./ButtonLink";
 import html from "/public/icons/html.png";
 import css from "/public/icons/css.png";
 import procreate from "/public/icons/procreate.png";
