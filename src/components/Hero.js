@@ -4,17 +4,25 @@ import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrow
 import { useRouter } from "next/navigation";
 // import pic from "/public/Mini Room - Bre@2-725x473.png";
 import Image from "next/image";
-import Spline from "@splinetool/react-spline";
-import { Suspense } from "react";
+// import Spline from "@splinetool/react-spline";
+
+  const Spline = React.lazy(() => import('@splinetool/react-spline'));
+
+
 
 export default function Hero() {
   const router = useRouter();
   const [isNavShowing, setIsNavShowing]= useState()
 
+
   return (
     <div className="text-center bg-purple-50 dark:bg-[#23005e] dark:text-white relative h-screen pt-14 md:pt-3">
+      {/* <Spline scene="https://prod.spline.design/tag35kXcZemH8sh2/scene.splinecode" className="h-screen"/> */}
       <p className="mt-0 text-xl">Hi, my name is Breana and I am </p> <div className="text-center text-xl flex">
        
+
+
+
         {/* typewriter */}
         <div className="font-raleway text-center text-xl justify-center items-center align-middle w-screen">
           <Typewriter
@@ -45,7 +53,7 @@ export default function Hero() {
           <KeyboardDoubleArrowDownIcon />
         </span>
       </div>
-      <hr />
+   
     </div>
   );
 }

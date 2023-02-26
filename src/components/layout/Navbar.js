@@ -7,19 +7,20 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ArticleIcon from "@mui/icons-material/Article";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-// import { useScrollDirection } from 'hooks';
+import MobileNav from "./MobileNav";
+import { Fade } from "react-awesome-reveal";
 
 const links = [
   {
-    href: "#about",
+    href: "/#about",
     title: "About",
   },
   {
-    href: "#projects",
+    href: "/#projects",
     title: "Projects",
   },
   {
-    href: "#contact",
+    href: "/#contact",
     title: "Contact",
   },
 ];
@@ -78,26 +79,41 @@ function useScrollDirection() {
 
 function Navbar() {
   const scrollDirection = useScrollDirection();
-  const [navbar, setNavbar] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [mobile, setMobile] = useState(undefined);
+
+  useEffect(() => {
+    const updateMobile = () => {
+      setMobile(window.innerWidth < 870 ? true : false);
+    };
+
+    updateMobile();
+    window.addEventListener("resize", updateMobile);
+    return () => {
+      window.removeEventListener("resize", updateMobile);
+    };
+  }, []);
 
   return (
     <div
-      className={`${counter < 2 ? "md:hidden" : "md:show"} fixed
+      className={`${counter < 2 ? "md:hidden" : "md:show"} 
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
-      flex w-screen list-none p-3 h-10 md:h-14 align-center bg-blue-200 drop-shadow-lg transition-all duration-500 items-center text-md md:sticky fixed z-50 `}
+      flex w-screen list-none p-3 h-10 
+      md:h-14  md:align-center bg-blue-200 drop-shadow-lg md:transition-all md:duration-500  items-center md:text-md md:sticky fixed z-50 `}
     >
-      {/* Left side of navbar w/ page links */}
-      <span
-        className=" hidden
-      md:w-1/4 md:flex md:justify-around items-center text-center sm:max-w-[869px]
-      "
+      {/* Left side of navbar w/ page links  ${navbarOpen ? 'hidden' : "visible"}*/}
+      <ul
+        className={`
+       hidden
+      md:w-1/4 md:flex md:justify-around md:items-center md:text-center sm:max-w-[869px]
+      `}
       >
         {socials.map((socialSite, idx) => {
           return (
             <li key={idx}>
               <a
-                className="text-[0.6rem]  block"
+                className="md:text-[0.6rem]  md:block"
                 href={socialSite.webLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -108,11 +124,14 @@ function Navbar() {
             </li>
           );
         })}
-      </span>
+      </ul>
 
       {/* Logo */}
       <span
-        className="text-[1.35rem] md:text-2xl md:text-center md:cursor-pointer font-zidan text-left text-blue-800 w-1/2"
+        className="text-[1.35rem] font-zidan text-left text-blue-800 w-1/2
+top-0 left-0
+
+        md:text-2xl md:text-center md:cursor-pointer "
         onClick={() => {
           window.scrollTo(0, 0);
         }}
@@ -120,8 +139,11 @@ function Navbar() {
         Breana Johnson
       </span>
 
-      {/* Right side of navbar w/ page links */}
-      <span className="hidden md:w-1/4 md:flex md:justify-around scroll-smooth text-md align-middle">
+      {/* Right side of navbar w/ page links ${navbarOpen ? 'hidden' : "visible"} */}
+      <ul
+        className={` hidden
+      md:w-1/4 md:flex md:justify-around scroll-smooth md:text-md md:align-middle`}
+      >
         {links.map((link, idx) => {
           return (
             <li className="md:pt-1" key={idx}>
@@ -129,55 +151,26 @@ function Navbar() {
             </li>
           );
         })}
-
-        <button onClick={() => setDarkMode(!darkMode)} className="scale-75 pt-1">
-          {darkMode ? (
-            <LightModeOutlinedIcon />
-          ) : (
-            <DarkModeIcon />
-          )}
+        {/* DARK MODE */}
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="scale-75 pt-1"
+        >
+          {darkMode ? <LightModeOutlinedIcon /> : <DarkModeIcon />}
         </button>
-      </span>
+      </ul>
 
       {/* MOBILE (hamburger btn) */}
-      <span className="md:hidden w-1/2 text-right">
+      <span className="md:hidden w-1/2 text-right z-50">
         <button
-          // className="p-2 text-right justify-self-end "
           onClick={() => {
-            setNavbar(!navbar);
+            setNavbarOpen(!navbarOpen);
           }}
         >
-          {navbar ? <CloseIcon /> : <MenuIcon />}
+          {navbarOpen ? <CloseIcon /> : <MenuIcon />}
+          {navbarOpen && mobile && <MobileNav />}
         </button>
       </span>
-      {/* <div
-        className={`flex flex-col justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-          navbar ? "p-12 md:p-0 block" : "hidden"
-        }`}
-      ></div> */}
-      {/* <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-          <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2  md:hover:text-purple-600 md:hover:">
-            <Link href="#about" onClick={() => setNavbar(!navbar)}>
-              About
-            </Link>
-          </li>
-          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-white">
-            <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-              Blogs
-            </Link>
-          </li>
-          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-white">
-            <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-              Contact
-            </Link>
-          </li>
-          <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-white">
-            <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-              Projects
-            </Link>
-          </li>
-        </ul> 
-      </div>*/}
     </div>
   );
 }

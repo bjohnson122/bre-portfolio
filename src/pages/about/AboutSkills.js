@@ -16,30 +16,31 @@ const aboutTitleAnimation = {
   key: "about title",
   initial: { opacity: 0 },
   animate: { opacity: [0, 0.5, 1] },
-  transition: { delay: .5, duration: 1, repeat:0 },
+  transition: { delay: 0.5, duration: 1, repeat: 0 },
 };
 
 export default function About() {
-
-
   return (
-    <div className="pt-14" id="about ">
-      <div  className="font-zidan text-center text-3xl
+    <div className="pt-14" id="about">
+      <div
+        className="font-zidan text-center text-3xl
       sm:text-left sm:m-3 sm:ml-12 sm:text-4xl
       md:text-6xl
       lg:ml-16
       
-      ">
-        <Slide duration={1200} triggerOnce={true}>  <p>{"<About />"}</p></Slide>
-      
-      </div  >
-    <Fade duration={2200} delay={800} triggerOnce={true}>
+      "
+      >
+        <Slide duration={1000} triggerOnce={true}>
+          <p>{"<About />"}</p>
+        </Slide>
+      </div>
+      <Fade duration={1200} delay={800} triggerOnce={true}>
         <div>
           <AboutInfo />
           <Skills />
           <br />
-        </div></Fade>
-      
+        </div>
+      </Fade>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 
-export function useScrollDirection() {
+export default function useScrollDirection() {
     const [scrollDirection, setScrollDirection] = useState(null);
     let counter = 0;
     useEffect(() => {
