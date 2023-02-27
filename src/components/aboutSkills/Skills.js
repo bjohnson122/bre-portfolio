@@ -5,14 +5,14 @@ import css from "/public/icons/css.png";
 import procreate from "/public/icons/procreate.png";
 import firebase from "/public/icons/firebase.png";
 import gatsby from "/public/icons/gatsby.png";
-// import js from "/public/icons/js.png";
+import js from "/public/icons/js.png";
 import nextJS from "/public/icons/nextjs.png";
 import node from "/public/icons/node.png";
 import postgresql from "/public/icons/postgresql.png";
 import react from "/public/icons/react.png";
 import redux from "/public/icons/redux.png";
 import tailwind from "/public/icons/tailwind.png";
-// import git from "public/icons/git.png";
+import git from "public/icons/git.png";
 import SkillsIcon from "./SkillsIcon";
 import spline from "public/icons/spline.png";
 
@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 const skills = [
   { src: html, text: "HTML" },
   { src: css, text: "CSS" },
-  // { src: js, text: "Javascript" },
+  { src: js, text: "Javascript" },
   { src: react, text: "React" },
   { src: redux, text: "Redux" },
   { src: nextJS, text: "NextJS" },
@@ -30,7 +30,7 @@ const skills = [
   { src: node, text: "Node" },
   { src: postgresql, text: "PostgreSQL" },
   { src: firebase, text: "Firebase" },
-  // { src: git, text: "Git" },
+  { src: git, text: "Git" },
   { src: procreate, text: "Procreate" },
   { src: spline, text: "Spline" },
 ];
