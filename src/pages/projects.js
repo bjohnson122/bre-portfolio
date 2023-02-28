@@ -1,12 +1,11 @@
 import React from "react";
+import Project from "@/components/Work/PortfolioProjects";
 
 export default function Projects() {
   return (
-    <div id="projects" className="text-center text-9xl pt-12 bg-violet-50 h-screen w-screen overflow-scroll">
-      
-      <h1>PROJECTS</h1>
-      <br />
-      <h1>PROJECTS</h1>
+    <div id="projects" >
+      <Project />
+     
       
     </div>
   );
