@@ -2,6 +2,9 @@ import React from "react";
 import Project from "./Project";
 import PNYCmobile from "/public/MobilePNYC.png";
 import BookWormImage from "/public/ComputerBW.png";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
+import ComputerPNYC from "/public/ComputerPNYC.png";
+import Image from "next/image";
 
 const shownProjects = [
   {
@@ -23,6 +26,15 @@ const shownProjects = [
 export default function PortfolioProjects() {
   return (
     <div className="pt-12 bg-yellow-100 h-[300vh] flex">
+      <div>
+        <Project />
+      </div>
+       {/* <ParallaxProvider>
+     <Parallax speed={6}  translateY={[-80, 30]}>
+       <div>
+         <Image src={ComputerPNYC} alt="Computer MOBILE" className="scale-50"/>
+       </div>
+     </Parallax></ParallaxProvider> */}
       {/* SAMPLE TEXT */}
       {/* <div className=" bg-green-400 text-7xl font-extrabold text-center w-1/2 h-[100vh] justify-center flex">
         <h2 className="align-middle mt-52">About</h2>
