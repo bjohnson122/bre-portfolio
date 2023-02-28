@@ -21,7 +21,7 @@ export default function Loader() {
       <div className="text-center w-full p-5 pt-[calc(100vh/2.6)]">
         {/* typing text */}
         <div
-          className="font-zidan tracking-[.05em] text-[2.3rem]
+          className="font-zidan tracking-[.05em] text-[2.3rem] dark:text-[#F5F0F0] text-[#101014]
           2xl:text-8xl
          sm:text-6xl
           md:text-7xl flex-nowrap block "
@@ -34,7 +34,7 @@ export default function Loader() {
               loop: false,
               delay: 100,
               changeDeleteSpeed: 12,
-              pauseFor: 1400,
+              pauseFor: 1450,
               delay: 75,
             }}
           />
@@ -44,7 +44,7 @@ export default function Loader() {
 
         <motion.div
           {...loaderSmallTextAnimation}
-          className="font-raleway font-semibold pt-3 sm:pt-7 md:pt-6 relative text-[14px] sm:text-[1.35rem] text-indigo-600"
+          className="font-raleway font-semibold pt-3 sm:pt-7 md:pt-6 relative text-[14px] sm:text-[1.35rem] text-[#3d53fc]"
         >
           Software Engineer & Graphic Designer
         </motion.div>

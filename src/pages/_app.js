@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div>
       {loading && path === "/" && (
-        <div className=" bg-gray-800">
+        <div className=" dark:bg-[#101014] bg-[#F5F0F0]">
           <AnimatePresence>
             <motion.div {...loaderFadeAnimation}>
               <Loader />
