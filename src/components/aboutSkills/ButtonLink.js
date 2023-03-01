@@ -9,11 +9,11 @@ export default function ButtonLink() {
 
   return (
     <div>
-      <div className="items-center text-center pt-4" ref={ref}>
+      <div className="items-center text-center pt-4 scale-110 sm:scale-100" ref={ref}>
         <Link href="/transferable-skills">
           {isInView && (
             <button
-              className={` rounded-full bg-gray-800 text-white p-1 px-2 ${"animate__animated animate__headShake"} xs:text-xs sm:text-sm text-[.55rem]`}
+              className={` rounded-full bg-gray-800 text-white shadow-md  shadow-[#6352ff]/40 p-1 px-2 ${"animate__animated animate__headShake"}  sm:text-sm text-[.55rem] `}
               ref={ref}
             >
               Checkout my non-technical portfolio and transferable skills here!

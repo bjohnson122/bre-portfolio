@@ -131,7 +131,7 @@ function Navbar() {
 
       {/* Logo */}
       <span
-        className="text-[1.35rem] font-zidan text-left text-[#262626] dark:text-[#6352ff] w-1/2
+        className="text-[1.23rem] font-zidan text-left text-[#262626] dark:text-[#6352ff] w-1/2
 top-0 left-0
 
         md:text-2xl md:text-center md:cursor-pointer tracking-wider "
@@ -168,12 +168,13 @@ top-0 left-0
       {/* MOBILE (hamburger btn) */}
       <span className="md:hidden w-1/2 text-right z-50">
         <button
+        
           onClick={() => {
             setNavbarOpen(!navbarOpen);
           }}
         >
-          {navbarOpen ? <CloseIcon /> : <MenuIcon />}
-          {navbarOpen && mobile && <MobileNav />}
+          {navbarOpen ? <CloseIcon className="text-white"/> : <MenuIcon className="text-white" />}
+          {navbarOpen && mobile && <MobileNav  className=' text-black'/>}
         </button>
       </span>
     </div>
