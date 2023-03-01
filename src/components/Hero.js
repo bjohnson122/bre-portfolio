@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <div className="text-center dark:bg-[#2d2d2d] dark:text-white relative h-screen pt-14 md:pt-3">
-      {/* <Spline scene="https://prod.spline.design/tag35kXcZemH8sh2/scene.splinecode" className="h-screen"/> */}
+      <Spline scene="https://prod.spline.design/tag35kXcZemH8sh2/scene.splinecode" className="h-screen -mt-28"/>
       <p className="mt-0 text-xl ">Hi, my name is Breana and I am </p> <div className="text-center text-xl flex">
        
 

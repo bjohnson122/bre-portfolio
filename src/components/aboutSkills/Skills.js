@@ -71,11 +71,11 @@ export default function Skills() {
     <motion.div {...skillsTextAnimation} className="h-[90vh] w-screen p-2  ">
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
-        <div className="flex-grow border-t border-gray-500 mt-4"></div>
-        <span className="flex-shrink mx-4 text-gray-900 mt-4 sm:text-xl md:text-[1.37rem]">
+        <div className="flex-grow border-t-2 border-[#6352ff] font-bold mt-4"></div>
+        <span className="flex-shrink mx-4 mt-4  sm:text-xl font-semibold md:text-[1.37rem]">
           Skills
         </span>
-        <div className="flex-grow border-t border-gray-500 mt-4"></div>
+        <div className="flex-grow  border-t-2 border-[#6352ff] font-bold mt-4"></div>
       </div>
 
       {/* ICONS */}
@@ -136,8 +136,6 @@ export default function Skills() {
           </div>
         )}
         <br />
-
-        {/* UPDATE WITH WORKING LINK & button !!! */}
         <ButtonLink />
       </div>
     </motion.div>
