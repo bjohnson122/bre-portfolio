@@ -8,7 +8,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import MobileNav from "./MobileNav";
-import { Fade } from "react-awesome-reveal";
+
 
 const links = [
   {
@@ -97,23 +97,26 @@ function Navbar() {
 
   return (
     <div
-      className={`${counter < 2 ? "md:hidden" : "md:show"} 
+      className={`${counter < 0 ? "md:hidden" : "md:show"} 
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
       flex w-screen list-none p-3 h-10 
-      md:h-14  md:align-center bg-blue-200 drop-shadow-lg md:transition-all md:duration-500  items-center md:text-md md:sticky fixed z-50 `}
+      md:h-14  md:align-center bg-[#7060ff]
+     
+      dark:bg-[#1c1c23]  shadow-lg shadow-[#000000]/40 dark:shadow-[#262626]/50
+      md:transition-all md:duration-500  items-center md:text-md md:sticky fixed z-50 `}
     >
-      {/* Left side of navbar w/ page links  ${navbarOpen ? 'hidden' : "visible"}*/}
+      {/* Left side of navbar w/ page links */}
       <ul
         className={`
        hidden
-      md:w-1/4 md:flex md:justify-around md:items-center md:text-center sm:max-w-[869px]
+      md:w-1/4 md:flex md:justify-around md:items-center md:text-center sm:max-w-[869px] text-[#f7f7f7]
       `}
       >
         {socials.map((socialSite, idx) => {
           return (
             <li key={idx}>
               <a
-                className="md:text-[0.6rem]  md:block"
+                className="md:text-[0.6rem]  md:block font-semibold tracking-wider"
                 href={socialSite.webLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -128,10 +131,10 @@ function Navbar() {
 
       {/* Logo */}
       <span
-        className="text-[1.35rem] font-zidan text-left text-blue-800 w-1/2
+        className="text-[1.35rem] font-zidan text-left text-[#262626] dark:text-[#6352ff] w-1/2
 top-0 left-0
 
-        md:text-2xl md:text-center md:cursor-pointer "
+        md:text-2xl md:text-center md:cursor-pointer tracking-wider "
         onClick={() => {
           window.scrollTo(0, 0);
         }}
@@ -139,10 +142,10 @@ top-0 left-0
         Breana Johnson
       </span>
 
-      {/* Right side of navbar w/ page links ${navbarOpen ? 'hidden' : "visible"} */}
+      {/* Right side of navbar w/ page links */}
       <ul
         className={` hidden
-      md:w-1/4 md:flex md:justify-around scroll-smooth md:text-md md:align-middle`}
+      md:w-1/4 md:flex md:justify-around scroll-smooth md:text-md md:align-middle text-[#f7f7f7]`}
       >
         {links.map((link, idx) => {
           return (
@@ -151,6 +154,8 @@ top-0 left-0
             </li>
           );
         })}
+
+        
         {/* DARK MODE */}
         <button
           onClick={() => setDarkMode(!darkMode)}

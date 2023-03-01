@@ -25,7 +25,7 @@ export default function Contact() {
 
   return (
     <div
-      className="h-[80vh] w-screen overflow-hidden"
+      className="h-[80vh] w-screen overflow-hidden dark:bg"
       id="contact"
       ref={ref}
     >
@@ -46,7 +46,7 @@ export default function Contact() {
       {/* SOCIAL ICONS */}
       <div
         className="scale-[2.7] mt-12 p-4 z-50 text-black space-x-5 text-center sm:scale-[2.5] sm:mt-[12.5rem] 
-        md:scale-[3.2] md:space-x-10  md:mt-72"
+        md:scale-[3.2] md:space-x-10  md:mt-72 dark:text-[#6352ff] "
       >
         <a
           href="https://www.linkedin.com/in/breanaj/"
