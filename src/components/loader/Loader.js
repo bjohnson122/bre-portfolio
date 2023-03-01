@@ -15,7 +15,7 @@ const loaderSmallTextAnimation = {
 
 export default function Loader() {
   return (
-    <div className='h-screen'>
+    <div className="h-screen">
       <Meta />
       {/* containter */}
       <div className="text-center w-full p-5 pt-[calc(100vh/2.6)]">
@@ -44,7 +44,7 @@ export default function Loader() {
 
         <motion.div
           {...loaderSmallTextAnimation}
-          className="font-raleway font-semibold pt-3 sm:pt-7 md:pt-6 relative text-[14px] sm:text-[1.35rem] text-[#3d53fc]"
+          className="font-raleway font-semibold pt-3 sm:pt-7 md:pt-6 relative text-[14px] sm:text-[1.35rem] text-[#6352ff]"
         >
           Software Engineer & Graphic Designer
         </motion.div>
