@@ -25,9 +25,15 @@ const shownProjects = [
 
 export default function PortfolioProjects() {
   return (
-    <div className="pt-12 bg-yellow-50 h-[100vh] flex">
-     <p className="text-5xl"> projects here</p>
- 
+    <div className="pt-12 h-fit text-center p-4">
+      <Project/>
+     {/* {shownProjects.map(({title, img, description, type, role}, idx) => {
+      return (
+        <div key={idx}>
+        <Project title={title} description={description} type={type} role={role} />
+</div>
+      )
+     })} */}
     </div>
   );
 }
