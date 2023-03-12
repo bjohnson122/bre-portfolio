@@ -9,7 +9,7 @@ import Image from "next/image";
 const shownProjects = [
   {
     title: "PocketNYC",
-    img: PNYCmobile,
+    img: PNYCmobile, 
     description: "An awesome app that hosts free events and resources in NYC.",
     type: "Progressive Web App",
     role: "Fullstack Developer and Graphic Designer",
@@ -26,14 +26,14 @@ const shownProjects = [
 export default function PortfolioProjects() {
   return (
     <div className="pt-12 h-fit text-center p-4">
-      <Project/>
-     {/* {shownProjects.map(({title, img, description, type, role}, idx) => {
+      {/* <Project/> */}
+     {shownProjects.map(({title, img, description, type, role}, idx) => {
       return (
         <div key={idx}>
-        <Project title={title} description={description} type={type} role={role} />
+        <Project title={title} description={description} type={type} role={role} img={img}/>
 </div>
       )
-     })} */}
+     })}
     </div>
   );
 }
