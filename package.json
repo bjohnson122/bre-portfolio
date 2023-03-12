@@ -30,6 +30,7 @@
     "react-dom": "18.2.0",
     "react-parallax-tilt": "^1.7.107",
     "react-scroll-parallax": "^3.3.2",
+    "styled-components": "^5.3.6",
     "three": "^0.149.0",
     "typewriter-effect": "^2.19.0"
   },

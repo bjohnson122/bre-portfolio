@@ -2,8 +2,9 @@ import "@/styles/globals.css";
 import Layout from "@/components/layout/Layout";
 import Loader from "@/components/loader/Loader";
 import React, { useEffect, useState, Suspense } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { useRouter } from "next/router";
+
 
 
 // import Hero3d from '../components/Hero3d'
@@ -16,6 +17,8 @@ export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const path = router.pathname;
+  const { scrollYProgress } = useScroll();
+
 
   // const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
@@ -52,6 +55,7 @@ export default function App({ Component, pageProps }) {
 
       {!loading && (
         <div>
+
           <Suspense>
           <Layout>
             <Component className='h-screen w-screen' {...pageProps} />
