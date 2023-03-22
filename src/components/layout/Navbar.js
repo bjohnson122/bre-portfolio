@@ -8,7 +8,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import MobileNav from "./MobileNav";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const links = [
   {
@@ -84,6 +84,12 @@ function Navbar() {
   const [mobile, setMobile] = useState(undefined);
   const { scrollYProgress } = useScroll();
 
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 25,
+    restDelta: 0.001,
+  });
+
   useEffect(() => {
     const updateMobile = () => {
       setMobile(window.innerWidth < 870 ? true : false);
@@ -108,7 +114,7 @@ function Navbar() {
     >
       <motion.div
         className="fixed top-0 left-0 right-0 h-[.15rem] lg:h-1 bg-[#7060ff] origin-left drop-shadow-md"
-        style={{ scaleX: scrollYProgress }}
+        style={{ scaleX }}
       />
       {/* Left side of navbar w/ page links */}
 
@@ -132,28 +138,6 @@ function Navbar() {
           );
         })}
       </ul>
-      {/* <ul
-        className={`
-       hidden
-      md:w-1/4 md:flex md:justify-around md:items-center md:text-center sm:max-w-[869px] text-[#f7f7f7]
-      `}
-      >
-        {socials.map((socialSite, idx) => {
-          return (
-            <li key={idx}>
-              <a
-                className="md:text-[0.6rem]  md:block font-semibold tracking-wider"
-                href={socialSite.webLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {socialSite.component}
-                <br /> {socialSite.title}
-              </a>
-            </li>
-          );
-        })}
-      </ul> */}
 
       {/* Logo */}
       <span
@@ -190,21 +174,7 @@ top-0 left-0
             </li>
           );
         })}
-
-       </ul>
-
-      {/* <ul
-        className={` hidden
-      md:w-1/4 md:flex md:justify-around scroll-smooth md:text-md md:align-middle text-[#f7f7f7]`}
-      >
-        {links.map((link, idx) => {
-          return (
-            <li className="md:pt-1" key={idx}>
-              <a href={link.href}>{link.title}</a>
-            </li>
-          );
-        })}
-    
+      </ul>
 
       {/* MOBILE (hamburger btn) */}
       <span className="md:hidden w-1/2 text-right z-50">
