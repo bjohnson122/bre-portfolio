@@ -1,31 +1,7 @@
-import Image from "next/image";
-import React from "react";
-import artShow from "/public/xfer/artShow.png";
-import cherries from "/public/xfer/cherries.jpg";
-import cole from "/public/xfer/cole.jpg";
-import drawingCole from "/public/xfer/drawingCole.jpg";
-import faces from "/public/xfer/faces.jpg";
-import greenNails from "/public/xfer/greenNails.jpg";
-import gridNails from "/public/xfer/gridNails.jpg";
-import halloweenNails from "/public/xfer/halloweenNails.jpg";
-import huey from "/public/xfer/huey.jpg";
-import kanye from "/public/xfer/kanye.jpg";
-import kawsP from "/public/xfer/kawsP.jpeg";
-import kawsSSNails from "/public/xfer/kawsSSNails.jpg";
-import kendrick from "/public/xfer/kendrick.jpg";
-import money from "/public/xfer/money.jpg";
-import kehlani from "/public/xfer/negativeDrawing.jpg";
-import nipsey from "/public/xfer/nipsey.jpg";
-import pac from "/public/xfer/pac.jpg";
-import purpleNails from "/public/xfer/purpleNails.jpg";
-import srNails from "/public/xfer/srNails.jpg";
-import swirlArtNails from "/public/xfer/swirlArtNails.jpg";
-import thEvent from "/public/xfer/thEvent.jpg";
-import twoHandsNailWraps from "/public/xfer/twoHandsNailWraps.jpg";
-import wraps from "/public/xfer/wraps.jpg";
-import xmasNails from "/public/xfer/xmasNails.jpg";
-import hueyPainting from "public/xfer/hueyPainting.jpg";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+// import Image from "next/image";
+// import React, { useState } from "react";
+// import Photos from "./photos";
+// import Masonry from "react-responsive-masonry";
 
 export default function Images() {
   let imageContentWeb = [
@@ -102,7 +78,7 @@ export default function Images() {
       caption: "",
       category: "art",
     },
-  
+
     {
       id: 11,
       imageSrc: kanye,
@@ -114,19 +90,21 @@ export default function Images() {
       imageSrc: kawsP,
       caption: "",
       category: "nails",
-    },  {
+    },
+    {
       id: 23,
       imageSrc: xmasNails,
       caption: "",
       category: "nails",
     },
-   
+
     {
       id: 13,
       imageSrc: kawsSSNails,
       caption: "",
       category: "nails",
-    }, {
+    },
+    {
       id: 14,
       imageSrc: kendrick,
       caption: "",
@@ -137,7 +115,8 @@ export default function Images() {
       imageSrc: hueyPainting,
       caption: "",
       category: "art",
-    },  {
+    },
+    {
       id: 25,
       imageSrc: kehlani,
       caption: "",
@@ -156,7 +135,6 @@ export default function Images() {
       caption: "",
       category: "nails",
     },
-  
 
     {
       id: 17,
@@ -183,6 +161,14 @@ export default function Images() {
       category: "art",
     },
   ];
+  const [pictures, setPictures] = useState(Photos);
+
+  const filterPictures = (selectedCategory) => {
+    const updatedPictures = Photos.filter((ele) => {
+      return ele.category == selectedCategory;
+    });
+    setPictures(updatedPictures)
+  };
 
   return (
     <Masonry>
@@ -200,3 +186,4 @@ export default function Images() {
     </Masonry>
   );
 }
+ 

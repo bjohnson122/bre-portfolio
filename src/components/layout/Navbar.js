@@ -104,7 +104,7 @@ function Navbar() {
 
   return (
     <div
-      className={`${counter < 0 ? "md:hidden" : "md:show"} 
+      className={`${counter < 2 ? "md:hidden" : "md:show"} 
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
       flex w-screen list-none p-3 h-10 
       md:h-14  md:align-center bg-[#7060ff]
