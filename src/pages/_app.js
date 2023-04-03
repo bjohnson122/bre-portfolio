@@ -5,13 +5,10 @@ import React, { useEffect, useState, Suspense } from "react";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { useRouter } from "next/router";
 
-
-
 // import Hero3d from '../components/Hero3d'
 // import * as THREE from 'three';
 // import { Canvas } from "@react-three/fiber";
 // import { OrbitControls } from '@react-three/drei';
-
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
@@ -19,10 +16,7 @@ export default function App({ Component, pageProps }) {
   const path = router.pathname;
   const { scrollYProgress } = useScroll();
 
-
   // const Spline = React.lazy(() => import('@splinetool/react-spline'));
-
-
 
   const loaderFadeAnimation = {
     key: "loader fade",
@@ -31,7 +25,7 @@ export default function App({ Component, pageProps }) {
     transition: { delay: 3.8, duration: 1 },
     exit: { opacity: 0 },
   };
-// FIX THIS****
+  // FIX THIS****
   useEffect(() => {
     // const loadDuration = setTimeout(() => {
     //   setLoading(false);
@@ -54,14 +48,13 @@ export default function App({ Component, pageProps }) {
       )} */}
 
       {/* {!loading && ( */}
-        <div>
-
-          <Suspense>
+      <div>
+        <Suspense>
           <Layout>
-            <Component className='h-screen w-screen' {...pageProps} />
+            <Component className="h-screen w-screen" {...pageProps} />
           </Layout>
-         </Suspense>
-        </div>
+        </Suspense>
+      </div>
       {/* )} */}
     </div>
   );

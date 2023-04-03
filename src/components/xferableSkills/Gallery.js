@@ -93,11 +93,9 @@ export default function Gallery() {
           </Tab>
         </Tab.List>
 
-
         {/* TAB CONTENT */}
 
-
-        <Tab.Panels className="relative w-[85vw] mx-auto h-screen px-[6px] rounded-md rounded-t-none bg-gray-600 overflow-scroll shadow-900/20 border-[#6352ff] border-2 border-t-0 pt-2" >
+        <Tab.Panels className="relative w-[85vw] mx-auto h-screen px-[6px] rounded-md rounded-t-none bg-gray-600 overflow-scroll shadow-900/20 border-[#6352ff] border-2 border-t-0 pt-2">
           <Tab.Panel className="flex">
             {" "}
             <Masonry>

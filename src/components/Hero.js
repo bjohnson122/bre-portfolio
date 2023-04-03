@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { useRouter } from "next/navigation";
@@ -6,23 +6,18 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 // import Spline from "@splinetool/react-spline";
 
-  const Spline = React.lazy(() => import('@splinetool/react-spline'));
-
-
+// const Spline = React.lazy(() => import('@splinetool/react-spline'));
+// dark:bg-[#63637a]
 
 export default function Hero() {
   const router = useRouter();
-  const [isNavShowing, setIsNavShowing]= useState()
-
+  const [isNavShowing, setIsNavShowing] = useState();
 
   return (
-    <div className="text-center dark:bg-[#63637a] dark:text-white relative h-screen pt-14 md:pt-3">
-        <Spline scene="https://prod.spline.design/tag35kXcZemH8sh2/scene.splinecode" className="h-screen -mt-28"/>
-      <p className="mt-0 text-xl ">Hi, my name is Breana and I am </p> <div className="text-center text-xl flex">
-       
-
-
-
+    <div className="text-center relative h-screen pt-14 md:pt-3">
+      {/* <Spline scene="https://prod.spline.design/tag35kXcZemH8sh2/scene.splinecode" className="h-screen -mt-28"/> */}
+      <p className="mt-0 text-xl ">Hi, my name is Breana and I am </p>{" "}
+      <div className="text-center text-xl flex">
         {/* typewriter */}
         <div className="font-raleway text-center text-xl justify-center items-center align-middle w-screen">
           <Typewriter
@@ -53,7 +48,6 @@ export default function Hero() {
           <KeyboardDoubleArrowDownIcon />
         </span>
       </div>
-   
     </div>
   );
 }
