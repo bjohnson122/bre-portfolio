@@ -31,19 +31,19 @@ export default function App({ Component, pageProps }) {
     transition: { delay: 3.8, duration: 1 },
     exit: { opacity: 0 },
   };
-
+// FIX THIS****
   useEffect(() => {
-    const loadDuration = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-    return () => {
-      clearTimeout(loadDuration);
-    };
+    // const loadDuration = setTimeout(() => {
+    //   setLoading(false);
+    // }, 5000);
+    // return () => {
+    //   clearTimeout(loadDuration);
+    // };
   }, []);
 
   return (
     <div>
-      {loading && path === "/" && (
+      {/* {loading && path === "/" && (
         <div className=" dark:bg-[#101014] bg-[#faf8fd]">
           <AnimatePresence>
             <motion.div {...loaderFadeAnimation}>
@@ -51,9 +51,9 @@ export default function App({ Component, pageProps }) {
             </motion.div>
           </AnimatePresence>
         </div>
-      )}
+      )} */}
 
-      {!loading && (
+      {/* {!loading && ( */}
         <div>
 
           <Suspense>
@@ -62,7 +62,7 @@ export default function App({ Component, pageProps }) {
           </Layout>
          </Suspense>
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 }
