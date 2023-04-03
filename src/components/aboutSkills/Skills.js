@@ -12,9 +12,9 @@ import postgresql from "/public/icons/postgresql.png";
 import react from "/public/icons/react.png";
 import redux from "/public/icons/redux.png";
 import tailwind from "/public/icons/tailwind.png";
-import git from "public/icons/git.png";
+import git from "/public/icons/git.png";
+import spline from "/public/icons/spline.png";
 import SkillsIcon from "./SkillsIcon";
-import spline from "public/icons/spline.png";
 
 import { motion } from "framer-motion";
 
