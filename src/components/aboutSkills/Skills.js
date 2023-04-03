@@ -12,7 +12,7 @@ import postgresql from "/public/icons/postgresql.png";
 import react from "/public/icons/react.png";
 import redux from "/public/icons/redux.png";
 import tailwind from "/public/icons/tailwind.png";
-// import gitIcon from "/public/icons/gitIcon.png";
+import gitIcon from "/public/icons/gitIcon.png";
 import spline from "/public/icons/spline.png";
 import SkillsIcon from "./SkillsIcon";
 
