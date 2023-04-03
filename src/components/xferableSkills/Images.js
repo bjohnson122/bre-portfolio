@@ -14,7 +14,7 @@ import kawsP from "/public/xfer/kawsP.jpeg";
 import kawsSSNails from "/public/xfer/kawsSSNails.jpg";
 import kendrick from "/public/xfer/kendrick.jpg";
 import money from "/public/xfer/money.jpg";
-import kehlani from "/public/xfer/negativeDrawing.JPG";
+import kehlani from "/public/xfer/negativeDrawing.jpg";
 import nipsey from "/public/xfer/nipsey.jpg";
 import pac from "/public/xfer/pac.jpg";
 import purpleNails from "/public/xfer/purpleNails.jpg";
@@ -65,18 +65,24 @@ export default function Images() {
       caption: "",
       category: "nails",
     },
-    {
-      id: 3,
-      imageSrc: cole,
-      caption: "",
-      category: "art",
-    },
 
     {
       id: 1,
       imageSrc: artShow,
       caption: "",
       category: "art",
+    },
+    {
+      id: 3,
+      imageSrc: cole,
+      caption: "",
+      category: "art",
+    },
+    {
+      id: 32,
+      imageSrc: greenNails,
+      caption: "",
+      category: "nails",
     },
     {
       id: 4,
@@ -96,12 +102,7 @@ export default function Images() {
       caption: "",
       category: "art",
     },
-    {
-      id: 23,
-      imageSrc: xmasNails,
-      caption: "",
-      category: "nails",
-    },
+  
     {
       id: 11,
       imageSrc: kanye,
@@ -113,22 +114,32 @@ export default function Images() {
       imageSrc: kawsP,
       caption: "",
       category: "nails",
+    },  {
+      id: 23,
+      imageSrc: xmasNails,
+      caption: "",
+      category: "nails",
     },
+   
     {
+      id: 13,
+      imageSrc: kawsSSNails,
+      caption: "",
+      category: "nails",
+    }, {
       id: 14,
       imageSrc: kendrick,
       caption: "",
       category: "art",
     },
     {
-      id: 13,
-      imageSrc: kawsSSNails,
-      caption: "",
-      category: "nails",
-    },
-    {
       id: 24,
       imageSrc: hueyPainting,
+      caption: "",
+      category: "art",
+    },  {
+      id: 25,
+      imageSrc: kehlani,
       caption: "",
       category: "art",
     },
@@ -145,12 +156,7 @@ export default function Images() {
       caption: "",
       category: "nails",
     },
-    {
-      id: 25,
-      imageSrc: kehlani,
-      caption: "",
-      category: "art",
-    },
+  
 
     {
       id: 17,
