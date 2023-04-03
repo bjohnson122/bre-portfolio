@@ -13,7 +13,7 @@ export default function Gallery() {
     <div className="bg-purple-200 h-[120vh] w-screen pt-12">
       <Tab.Group>
         {/* TAB TITLE */}
-        <Tab.List className="relative w-[90vw] mx-auto h-12 grid grid-cols-4 items-center px-[6px] rounded-md  bg-gray-800 overflow-hidden shadow-2xl shadow-900/20 transition">
+        <Tab.List className="relative w-[90vw] mx-auto h-14 grid grid-cols-4 items-center px-[6px] rounded-md  bg-gray-800 overflow-hidden shadow-2xl shadow-900/20 transition">
           <Tab
             className={({ selected }) =>
               classNames(
@@ -68,8 +68,8 @@ export default function Gallery() {
           </Tab>
         </Tab.List>
         {/* TAB CONTENT */}
-        <Tab.Panels className='relative w-[90vw] mx-auto h-screen grid grid-cols-4 items-center px-[6px] rounded-md  bg-gray-600 overflow-scroll shadow-2xl shadow-900/20 transition'>
-          <Tab.Panel className='grid grid-cols-3'><Images /></Tab.Panel>
+        <Tab.Panels className='relative w-[90vw] mx-auto h-screen px-[6px] rounded-md  bg-gray-600 overflow-scroll shadow-2xl shadow-900/20 transition'>
+          <Tab.Panel className='flex'><Images /></Tab.Panel>
           <Tab.Panel>2. ART</Tab.Panel>
           <Tab.Panel>3. NAILS</Tab.Panel>
           <Tab.Panel>4. Featured Posts</Tab.Panel>

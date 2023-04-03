@@ -17,7 +17,7 @@ import spline from "/public/icons/spline.png";
 import SkillsIcon from "./SkillsIcon";
 
 import { motion } from "framer-motion";
-
+// FIX THE ICONS
 const skills = [
   { src: html, text: "HTML" },
   { src: css, text: "CSS" },
