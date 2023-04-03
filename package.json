@@ -30,6 +30,7 @@
     "react-awesome-reveal": "^4.2.3",
     "react-dom": "18.2.0",
     "react-parallax-tilt": "^1.7.107",
+    "react-responsive-masonry": "^2.1.7",
     "react-scroll-parallax": "^3.3.2",
     "styled-components": "^5.3.6",
     "three": "^0.149.0",

@@ -14,6 +14,7 @@ import kawsP from "/public/xfer/kawsP.jpeg";
 import kawsSSNails from "/public/xfer/kawsSSNails.jpg";
 import kendrick from "/public/xfer/kendrick.jpg";
 import money from "/public/xfer/money.jpg";
+import kehlani from "/public/xfer/negativeDrawing.JPG";
 import nipsey from "/public/xfer/nipsey.jpg";
 import pac from "/public/xfer/pac.jpg";
 import purpleNails from "/public/xfer/purpleNails.jpg";
@@ -24,8 +25,10 @@ import twoHandsNailWraps from "/public/xfer/twoHandsNailWraps.jpg";
 import wraps from "/public/xfer/wraps.jpg";
 import xmasNails from "/public/xfer/xmasNails.jpg";
 import hueyPainting from "public/xfer/hueyPainting.jpg";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 export default function Images() {
-  let imageContent = [
+  let imageContentWeb = [
     {
       id: 5,
       imageSrc: faces,
@@ -36,17 +39,11 @@ export default function Images() {
       id: 10,
       imageSrc: huey,
       caption: "",
-      category: "",
+      category: "art",
     },
     {
       id: 2,
       imageSrc: cherries,
-      caption: "",
-      category: "nails",
-    },
-    {
-      id: 18,
-      imageSrc: srNails,
       caption: "",
       category: "nails",
     },
@@ -57,33 +54,33 @@ export default function Images() {
       category: "nails",
     },
     {
+      id: 18,
+      imageSrc: srNails,
+      caption: "",
+      category: "nails",
+    },
+    {
+      id: 9,
+      imageSrc: gridNails,
+      caption: "",
+      category: "nails",
+    },
+    {
       id: 3,
       imageSrc: cole,
       caption: "",
       category: "art",
     },
+
     {
-      id: 20,
-      imageSrc: thEvent,
+      id: 1,
+      imageSrc: artShow,
       caption: "",
-      category: "nails",
+      category: "art",
     },
     {
       id: 4,
       imageSrc: drawingCole,
-      caption: "",
-      category: "art",
-    },
-
-    {
-      id: 6,
-      imageSrc: greenNails,
-      caption: "",
-      category: "nails",
-    },
-    {
-      id: 1,
-      imageSrc: artShow,
       caption: "",
       category: "art",
     },
@@ -100,12 +97,11 @@ export default function Images() {
       category: "art",
     },
     {
-      id: 9,
-      imageSrc: gridNails,
+      id: 23,
+      imageSrc: xmasNails,
       caption: "",
       category: "nails",
     },
-
     {
       id: 11,
       imageSrc: kanye,
@@ -119,46 +115,14 @@ export default function Images() {
       category: "nails",
     },
     {
-      id: 23,
-      imageSrc: xmasNails,
-      caption: "",
-      category: "nails",
-    },
-    {
-      id: 13,
-      imageSrc: kawsSSNails,
-      caption: "",
-      category: "nails",
-    },
-    {
       id: 14,
       imageSrc: kendrick,
       caption: "",
       category: "art",
     },
-
     {
-      id: 21,
-      imageSrc: twoHandsNailWraps,
-      caption: "",
-      category: "nails",
-    },
-    {
-      id: 17,
-      imageSrc: purpleNails,
-      caption: "",
-      category: "nails",
-    },
-    {
-      id: 16,
-      imageSrc: pac,
-      caption: "",
-      category: "art",
-    },
-
-    {
-      id: 19,
-      imageSrc: swirlArtNails,
+      id: 13,
+      imageSrc: kawsSSNails,
       caption: "",
       category: "nails",
     },
@@ -168,24 +132,65 @@ export default function Images() {
       caption: "",
       category: "art",
     },
+    {
+      id: 21,
+      imageSrc: twoHandsNailWraps,
+      caption: "",
+      category: "nails",
+    },
 
+    {
+      id: 20,
+      imageSrc: thEvent,
+      caption: "",
+      category: "nails",
+    },
+    {
+      id: 25,
+      imageSrc: kehlani,
+      caption: "",
+      category: "art",
+    },
+
+    {
+      id: 17,
+      imageSrc: purpleNails,
+      caption: "",
+      category: "nails",
+    },
+    {
+      id: 19,
+      imageSrc: swirlArtNails,
+      caption: "",
+      category: "nails",
+    },
     {
       id: 15,
       imageSrc: money,
       caption: "",
       category: "nails",
     },
+    {
+      id: 16,
+      imageSrc: pac,
+      caption: "",
+      category: "art",
+    },
   ];
 
   return (
-    <div className="w-screen h-screen grid grid-cols-3 grid-rows-8 justify-center">
-      {imageContent.map((img, idx) => {
+    <Masonry>
+      {imageContentWeb.map(({ imageSrc }, idx) => {
         return (
-          <div key={idx} >
-            <Image src={img.imageSrc} alt="test" className="w-full"/>
+          <div key={idx}>
+            <Image
+              src={imageSrc}
+              alt="test"
+              className="block cursor-pointer p-1 rounded-lg"
+            />
           </div>
         );
       })}
-    </div>
+    </Masonry>
   );
 }
