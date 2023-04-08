@@ -24,300 +24,52 @@ import twoHandsNailWraps from "/public/xfer/twoHandsNailWraps.jpg";
 import wraps from "/public/xfer/wraps.jpg";
 import xmasNails from "/public/xfer/xmasNails.jpg";
 import hueyPainting from "public/xfer/hueyPainting.jpg";
+import pocketNYClogo from "/public/xfer/pocketNYClogo.png";
+import polishdLogo from "/public/xfer/polishdLogoWBB.png";
 
 const webPhotos = [
   {
-    id: 5,
+    id: 1,
     imageSrc: faces,
     caption: "",
     category: "nails",
     featured: true,
     link: "https://paintbucketnails.com/blogs/blog/inside-the-bucket-an-interview-with-nail-artist-breana-johnson",
   },
-  {
-    id: 10,
-    imageSrc: huey,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 2,
-    imageSrc: cherries,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 7,
-    imageSrc: halloweenNails,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 18,
-    imageSrc: srNails,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 9,
-    imageSrc: gridNails,
-    caption: "",
-    category: "nails",
-  },
-
-  {
-    id: 1,
-    imageSrc: artShow,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 22,
-    imageSrc: wraps,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 3,
-    imageSrc: cole,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 32,
-    imageSrc: greenNails,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 4,
-    imageSrc: drawingCole,
-    caption: "",
-    category: "art",
-  },
-
-  {
-    id: 8,
-    imageSrc: nipsey,
-    caption: "",
-    category: "art",
-  },
-
-  {
-    id: 11,
-    imageSrc: kanye,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 12,
-    imageSrc: kawsP,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 23,
-    imageSrc: xmasNails,
-    caption: "",
-    category: "nails",
-  },
-
-  {
-    id: 13,
-    imageSrc: kawsSSNails,
-    caption: "",
-    category: "nails",
-  },
+  { id: 2, imageSrc: huey, caption: "", category: "art" },
+  { id: 3, imageSrc: cherries, caption: "", category: "nails" },
+  { id: 4, imageSrc: halloweenNails, caption: "", category: "nails" },
+  { id: 5, imageSrc: srNails, caption: "", category: "nails" },
+  { id: 6, imageSrc: kendrick, caption: "", category: "art" },
+  { id: 7, imageSrc: gridNails, caption: "", category: "nails" },
+  { id: 8, imageSrc: polishdLogo, caption: "", category: "art" },
+  { id: 9, imageSrc: artShow, caption: "", category: "art" },
+  { id: 10, imageSrc: wraps, caption: "", category: "nails" },
+  { id: 11, imageSrc: kehlani, caption: "", category: "art" },
+  { id: 12, imageSrc: greenNails, caption: "", category: "nails" },
+  { id: 13, imageSrc: drawingCole, caption: "", category: "art" },
   {
     id: 14,
-    imageSrc: kendrick,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 24,
-    imageSrc: hueyPainting,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 26,
     imageSrc: eggMani,
     caption: "",
     category: "nails",
     featured: true,
     link: "https://www.refinery29.com/en-us/2019/05/232177/egg-nail-art-trend",
   },
-
-  {
-    id: 21,
-    imageSrc: twoHandsNailWraps,
-    caption: "",
-    category: "nails",
-  },
-
-  {
-    id: 20,
-    imageSrc: thEvent,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 25,
-    imageSrc: kehlani,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 17,
-    imageSrc: purpleNails,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 16,
-    imageSrc: pac,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 19,
-    imageSrc: swirlArtNails,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 15,
-    imageSrc: money,
-    caption: "",
-    category: "nails",
-  },
-];
-
-const mobilePhotos = [
-  {
-    id: 5,
-    imageSrc: faces,
-    caption: "",
-    category: "nails",
-    featured: true,
-    link: "https://paintbucketnails.com/blogs/blog/inside-the-bucket-an-interview-with-nail-artist-breana-johnson",
-  },
-  {
-    id: 10,
-    imageSrc: huey,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 2,
-    imageSrc: cherries,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 4,
-    imageSrc: drawingCole,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 7,
-    imageSrc: halloweenNails,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 18,
-    imageSrc: srNails,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 1,
-    imageSrc: artShow,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 22,
-    imageSrc: wraps,
-    caption: "",
-    category: "nails",
-  },
-
-  {
-    id: 32,
-    imageSrc: greenNails,
-    caption: "",
-    category: "nails",
-  },
-
-  {
-    id: 8,
-    imageSrc: nipsey,
-    caption: "",
-    category: "art",
-  },
-
-  {
-    id: 11,
-    imageSrc: kanye,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 12,
-    imageSrc: kawsP,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 23,
-    imageSrc: xmasNails,
-    caption: "",
-    category: "nails",
-  },
-
-  {
-    id: 13,
-    imageSrc: kawsSSNails,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 14,
-    imageSrc: kendrick,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 24,
-    imageSrc: hueyPainting,
-    caption: "",
-    category: "art",
-  },
-  {
-    id: 26,
-    imageSrc: eggMani,
-    caption: "",
-    category: "nails",
-    featured: true,
-    link: "https://www.refinery29.com/en-us/2019/05/232177/egg-nail-art-trend",
-  },
-
-  {
-    id: 20,
-    imageSrc: thEvent,
-    caption: "",
-    category: "nails",
-  },
-  {
-    id: 16,
-    imageSrc: pac,
-    caption: "",
-    category: "art",
-  },
+  { id: 15, imageSrc: nipsey, caption: "", category: "art" },
+  { id: 16, imageSrc: kawsSSNails, caption: "", category: "nails" },
+  { id: 17, imageSrc: purpleNails, caption: "", category: "nails" },
+  { id: 18, imageSrc: hueyPainting, caption: "", category: "art" },
+  { id: 19, imageSrc: xmasNails, caption: "", category: "nails" },
+  { id: 20, imageSrc: twoHandsNailWraps, caption: "", category: "nails" },
+  { id: 21, imageSrc: kanye, caption: "", category: "art" },
+  { id: 22, imageSrc: kawsP, caption: "", category: "nails" },
+  { id: 23, imageSrc: cole, caption: "", category: "art" },
+  { id: 24, imageSrc: thEvent, caption: "", category: "nails" },
+  { id: 25, imageSrc: pocketNYClogo, caption: "", category: "art" },
+  { id: 26, imageSrc: swirlArtNails, caption: "", category: "nails" },
+  { id: 27, imageSrc: pac, caption: "", category: "art" },
+  { id: 28, imageSrc: money, caption: "", category: "nails" },
 ];
 
 export default webPhotos;

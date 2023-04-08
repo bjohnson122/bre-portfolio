@@ -54,7 +54,7 @@ function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState(null);
 
   useEffect(() => {
-    counter++;
+  
     let lastScrollY = window.pageYOffset;
 
     const updateScrollDirection = () => {
@@ -94,7 +94,8 @@ function Navbar() {
     const updateMobile = () => {
       setMobile(window.innerWidth < 870 ? true : false);
     };
-
+counter++
+console.log(counter, 'count')
     updateMobile();
     window.addEventListener("resize", updateMobile);
     return () => {
