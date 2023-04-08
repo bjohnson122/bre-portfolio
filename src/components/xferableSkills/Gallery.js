@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Tab } from "@headlessui/react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import HomeIcon from "@mui/icons-material/Home";
-// import Images from "./Images";
 import Masonry from "react-responsive-masonry";
 import Image from "next/image";
 import WebPhotos from "./WebPhotos";
