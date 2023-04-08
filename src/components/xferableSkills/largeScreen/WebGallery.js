@@ -4,10 +4,15 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import HomeIcon from "@mui/icons-material/Home";
 import Masonry from "react-responsive-masonry";
 import Image from "next/image";
-import WebPhotos from "./WebPhotos";
+import WebPhotos from "./photosWebLargeScreen";
 import Link from "next/link";
 
-const tabTitles = [<HomeIcon key='null'/>, "Artist", "Nail Artist", "Features"];
+const tabTitles = [
+  <HomeIcon key="null" />,
+  "Artist",
+  "Nail Artist",
+  "Features",
+];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -33,10 +38,12 @@ export default function Gallery() {
     <div className=" h-[full] w-screen pt-12 ">
       <Tab.Group>
         {/* TAB TITLE */}
-        <Tab.List className="relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden pt-2 rounded-b-none pb-2 justify-between 
+        <Tab.List
+          className="relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden pt-2 rounded-b-none pb-2 justify-between 
         
         
-        ">
+        "
+        >
           <Tab
             className={({ selected }) =>
               classNames(

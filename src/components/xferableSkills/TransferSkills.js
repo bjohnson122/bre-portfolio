@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Slide, Fade } from "react-awesome-reveal";
-import Gallery from "./Gallery";
+import WebGallery from "./largeScreen/WebGallery";
+import MobileGallery from "./mobile/MobileGallery";
 import Summary from "./Summary";
 
 export default function TransferSkills() {
+  const [mobile, setMobile] = useState(undefined);
+
+  useEffect(() => {
+    const updateMobile = () => {
+      setMobile(window.innerWidth < 575 ? true : false);
+    };
+
+    updateMobile();
+    window.addEventListener("resize", updateMobile);
+    return () => {
+      window.removeEventListener("resize", updateMobile);
+    };
+  }, []);
+
   return (
     <div className="h-full mb-1">
       {/* TITLE */}
@@ -20,9 +35,9 @@ export default function TransferSkills() {
         </Slide>
       </div>
       {/* SUMMARY TEXT */}
-      <Summary />
-      {/* Content */}
-      <Gallery />
+      <Summary mobile={mobile}/>
+      {/* GALLERY CONTENT */}
+      {mobile ? <MobileGallery /> : <WebGallery />}
       <div></div>
     </div>
   );
