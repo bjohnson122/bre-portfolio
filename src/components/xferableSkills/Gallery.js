@@ -5,7 +5,7 @@ import HomeIcon from "@mui/icons-material/Home";
 // import Images from "./Images";
 import Masonry from "react-responsive-masonry";
 import Image from "next/image";
-import Photos from "./photos";
+import WebPhotos from "./WebPhotos";
 import Link from "next/link";
 
 const tabTitles = [<HomeIcon key='null'/>, "Artist", "Nail Artist", "Features"];
@@ -15,16 +15,16 @@ function classNames(...classes) {
 }
 
 export default function Gallery() {
-  const [pictures, setPictures] = useState(Photos);
+  const [pictures, setPictures] = useState(WebPhotos);
   function filterPictures(selectedCategory) {
-    const updatedPictures = Photos.filter((ele) => {
+    const updatedPictures = WebPhotos.filter((ele) => {
       return ele.category == selectedCategory;
     });
     setPictures(updatedPictures);
   }
 
   const showFeatured = () => {
-    const featuredContent = Photos.filter((ele) => {
+    const featuredContent = WebPhotos.filter((ele) => {
       return ele.featured == true;
     });
     setPictures(featuredContent);
@@ -48,7 +48,7 @@ export default function Gallery() {
                   : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
               )
             }
-            onClick={() => setPictures(Photos)}
+            onClick={() => setPictures(WebPhotos)}
           >
             {<HomeIcon />}
           </Tab>
