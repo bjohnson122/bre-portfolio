@@ -6,7 +6,7 @@ import Masonry from "react-responsive-masonry";
 import Image from "next/image";
 import WebPhotos from "./photosWebLargeScreen";
 import Link from "next/link";
-
+import { Fade } from "react-awesome-reveal";
 const tabTitles = [
   <HomeIcon key="null" />,
   "Artist",
@@ -111,11 +111,11 @@ export default function Gallery() {
               {pictures.map(({ imageSrc }, idx) => {
                 return (
                   <div key={idx}>
-                    <Image
+                 <Fade>   <Image
                       src={imageSrc}
                       alt="test"
                       className="block cursor-pointer p-1 rounded-lg"
-                    />
+                    /></Fade>
                   </div>
                 );
               })}
@@ -127,11 +127,11 @@ export default function Gallery() {
               {pictures.map(({ imageSrc }, idx) => {
                 return (
                   <div key={idx}>
-                    <Image
+                    <Fade>   <Image
                       src={imageSrc}
                       alt="test"
                       className="block cursor-pointer p-1 rounded-lg"
-                    />
+                    /></Fade>
                   </div>
                 );
               })}
@@ -143,11 +143,11 @@ export default function Gallery() {
               {pictures.map(({ imageSrc }, idx) => {
                 return (
                   <div key={idx}>
-                    <Image
+                 <Fade>   <Image
                       src={imageSrc}
                       alt="test"
                       className="block cursor-pointer p-1 rounded-lg"
-                    />
+                    /></Fade>
                   </div>
                 );
               })}
@@ -160,11 +160,11 @@ export default function Gallery() {
                 return (
                   <div key={idx}>
                     <Link href={link} target="_blank" rel="noopener noreferrer">
-                      <Image
-                        src={imageSrc}
-                        alt="test"
-                        className="block cursor-pointer p-1 rounded-lg"
-                      />
+                    <Fade>   <Image
+                      src={imageSrc}
+                      alt="test"
+                      className="block cursor-pointer p-1 rounded-lg"
+                    /></Fade>
                     </Link>
                   </div>
                 );
