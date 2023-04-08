@@ -101,7 +101,7 @@ export default function MobileGallery() {
 
         {/* TAB CONTENT */}
 
-        <Tab.Panels className="relative w-[85vw] mx-auto h-screen px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700 overflow-scroll border-[#6352ff] border-4 border-t-0 pt-2">
+        <Tab.Panels className="relative w-[85vw] mx-auto h-[80vh] px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700 overflow-scroll border-[#6352ff] border-4 border-t-0 pt-2">
           <Tab.Panel className="flex">
             {" "}
             <Masonry columnsCount={2}>

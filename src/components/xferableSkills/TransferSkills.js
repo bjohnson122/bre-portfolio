@@ -34,11 +34,13 @@ export default function TransferSkills() {
           </h1>
         </Slide>
       </div>
+      <div className="">
       {/* SUMMARY TEXT */}
-      <Summary mobile={mobile}/>
+      <div className=""><Summary mobile={mobile}/></div>
       {/* GALLERY CONTENT */}
-      {mobile ? <MobileGallery /> : <WebGallery />}
-      <div></div>
+      <div className="">
+      {mobile ? <MobileGallery className="" /> : <WebGallery />}
+      </div></div>
     </div>
   );
 }
