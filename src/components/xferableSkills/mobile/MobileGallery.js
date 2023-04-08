@@ -1,29 +1,33 @@
 import React, { useState } from "react";
 import { Tab } from "@headlessui/react";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import HomeIcon from "@mui/icons-material/Home";
 import Masonry from "react-responsive-masonry";
 import Image from "next/image";
-import WebPhotos from "./WebPhotos";
+import mobilePhotos from "./photosMobileScreen";
 import Link from "next/link";
 
-const tabTitles = [<HomeIcon key='null'/>, "Artist", "Nail Artist", "Features"];
+const tabTitles = [
+  <HomeIcon key="null" />,
+  "Artist",
+  "Nail Artist",
+  "Features",
+];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Gallery() {
-  const [pictures, setPictures] = useState(WebPhotos);
+export default function MobileGallery() {
+  const [pictures, setPictures] = useState(mobilePhotos);
   function filterPictures(selectedCategory) {
-    const updatedPictures = WebPhotos.filter((ele) => {
+    const updatedPictures = mobilePhotos.filter((ele) => {
       return ele.category == selectedCategory;
     });
     setPictures(updatedPictures);
   }
 
   const showFeatured = () => {
-    const featuredContent = WebPhotos.filter((ele) => {
+    const featuredContent = mobilePhotos.filter((ele) => {
       return ele.featured == true;
     });
     setPictures(featuredContent);
@@ -33,10 +37,10 @@ export default function Gallery() {
     <div className=" h-[full] w-screen pt-12 ">
       <Tab.Group>
         {/* TAB TITLE */}
-        <Tab.List className="relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden pt-2 rounded-b-none pb-2 justify-between 
-        
-        
-        ">
+        <Tab.List
+          className="relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden xs:pt-2 rounded-b-none pb-2 justify-between
+        "
+        >
           <Tab
             className={({ selected }) =>
               classNames(
@@ -47,7 +51,7 @@ export default function Gallery() {
                   : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
               )
             }
-            onClick={() => setPictures(WebPhotos)}
+            onClick={() => setPictures(mobilePhotos)}
           >
             {<HomeIcon />}
           </Tab>
@@ -97,10 +101,10 @@ export default function Gallery() {
 
         {/* TAB CONTENT */}
 
-        <Tab.Panels className="relative w-[85vw] mx-auto h-screen px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700 overflow-scroll  border-[#6352ff] border-4 border-t-0 pt-2">
+        <Tab.Panels className="relative w-[85vw] mx-auto h-screen px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700 overflow-scroll border-[#6352ff] border-4 border-t-0 pt-2">
           <Tab.Panel className="flex">
             {" "}
-            <Masonry>
+            <Masonry columnsCount={2}>
               {pictures.map(({ imageSrc }, idx) => {
                 return (
                   <div key={idx}>
@@ -116,7 +120,7 @@ export default function Gallery() {
           </Tab.Panel>
           <Tab.Panel className="flex">
             {" "}
-            <Masonry>
+            <Masonry columnsCount={2}>
               {pictures.map(({ imageSrc }, idx) => {
                 return (
                   <div key={idx}>
@@ -132,7 +136,7 @@ export default function Gallery() {
           </Tab.Panel>
           <Tab.Panel className="flex">
             {" "}
-            <Masonry>
+            <Masonry columnsCount={2}>
               {pictures.map(({ imageSrc }, idx) => {
                 return (
                   <div key={idx}>
@@ -148,7 +152,7 @@ export default function Gallery() {
           </Tab.Panel>
           <Tab.Panel className="flex">
             {" "}
-            <Masonry>
+            <Masonry columnsCount={2}>
               {pictures.map(({ imageSrc, link }, idx) => {
                 return (
                   <div key={idx}>
