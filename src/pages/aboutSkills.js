@@ -21,10 +21,10 @@ const aboutTitleAnimation = {
 
 export default function About() {
   return (
-    <div className="pt-14" id="about">
+    <div className="pt-12" id="about">
       <div
-        className="font-zidan text-center text-3xl
-      sm:text-left sm:m-3 sm:ml-12 sm:text-4xl
+        className="font-zidan text-center text-4xl
+      sm:text-left sm:m-3 sm:ml-12 
       md:text-6xl
       lg:ml-16
       

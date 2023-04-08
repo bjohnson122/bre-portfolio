@@ -25,7 +25,7 @@ import wraps from "/public/xfer/wraps.jpg";
 import xmasNails from "/public/xfer/xmasNails.jpg";
 import hueyPainting from "public/xfer/hueyPainting.jpg";
 
-const Photos = [
+const WebPhotos = [
   {
     id: 5,
     imageSrc: faces,
@@ -194,4 +194,4 @@ const Photos = [
 
 ];
 
-export default Photos;
+export default WebPhotos;

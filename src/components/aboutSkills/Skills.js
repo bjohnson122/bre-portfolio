@@ -72,7 +72,7 @@ export default function Skills() {
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
         <div className="flex-grow border-t-2 border-[#6352ff] font-bold mt-4"></div>
-        <span className="flex-shrink mx-4 mt-4  sm:text-xl font-semibold md:text-[1.37rem]">
+        <span className="flex-shrink mx-4  sm:text-xl font-semibold md:text-[1.37rem]">
           Skills
         </span>
         <div className="flex-grow  border-t-2 border-[#6352ff] font-bold mt-4"></div>
@@ -115,14 +115,14 @@ export default function Skills() {
           </div>
         ) : (
           <div
-            className="w-screen  text-[0.50rem] list-outside items-center justify-center px-2 mx-[1%] pl-[2.5%] mt-3
+            className="w-screen  text-[0.68rem] list-outside items-center justify-center px-2 mx-[1%] pl-[2.5%] mt-3
               xs:mx-[5%] xs:text-[.9rem]
              
-              sm:flex-col sm:text-xs sm:ml-[5%] sm:w-[70%]
+              sm:flex-col sm:ml-[5%] sm:w-[70%]
              
               md:grid md:grid-cols-2 md:gap-x-3 md:grid-rows-3 md:w-screen md:text-[0.9rem] md:ml-[3%] 
 
-              lg:text-[.8rem] lg:w-[76%] lg:ml-[12%] lg:gap-x-6 lg:pl-[4%] lg:-pr-[5%]
+              lg:text-[.85rem] lg:w-[85%] lg:ml-[10%] lg:gap-x-12 
 
               xl:text-base"
           >
