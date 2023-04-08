@@ -1,7 +1,7 @@
-// import Image from "next/image";
+import Image from "next/image";
 // import React, { useState } from "react";
 // import Photos from "./photos";
-// import Masonry from "react-responsive-masonry";
+import Masonry from "react-responsive-masonry";
 
 export default function Images() {
   let imageContentWeb = [

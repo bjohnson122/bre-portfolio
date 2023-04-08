@@ -5,15 +5,15 @@ import Summary from "./Summary";
 
 export default function TransferSkills() {
   return (
-    <div className="h-full">
+    <div className="h-full mb-1">
       {/* TITLE */}
       <div>
         <Slide duration={1000} triggerOnce={true}>
           <h1
-            className="text-[#6352ff] font-zidan  text-3xl
-            sm:text-left sm:m-3 sm:ml-4 sm:text-4xl
-            md:text-4xl md:text-center
-            lg:ml-5"
+            className="text-[#6352ff] font-zidan  
+            text-center m-3 text-4xl
+            md:text-4xl md:text-left md:ml-10
+           "
           >
             Transferable Skills
           </h1>

@@ -8,7 +8,7 @@ import Image from "next/image";
 import Photos from "./photos";
 import Link from "next/link";
 
-const tabTitles = [<HomeIcon />, "Artist", "Nail Artist", "Featured"];
+const tabTitles = [<HomeIcon key='null'/>, "Artist", "Nail Artist", "Features"];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -31,14 +31,17 @@ export default function Gallery() {
   };
 
   return (
-    <div className=" h-[120vh] w-screen pt-12">
+    <div className=" h-[full] w-screen pt-12 ">
       <Tab.Group>
         {/* TAB TITLE */}
-        <Tab.List className="relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  bg-gray-900 overflow-hidden rounded-b-none">
+        <Tab.List className="relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden pt-2 rounded-b-none pb-2 justify-between 
+        
+        
+        ">
           <Tab
             className={({ selected }) =>
               classNames(
-                "w-full rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
+                "w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
                 "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
                 selected
                   ? "bg-[#6352ff] bg-opacity-90 shadow"
@@ -52,7 +55,7 @@ export default function Gallery() {
           <Tab
             className={({ selected }) =>
               classNames(
-                "w-full rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
+                "w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
                 "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
                 selected
                   ? "bg-[#6352ff] bg-opacity-90 shadow"
@@ -66,7 +69,7 @@ export default function Gallery() {
           <Tab
             className={({ selected }) =>
               classNames(
-                "w-full rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
+                "w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
                 "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
                 selected
                   ? "bg-[#6352ff] bg-opacity-90 shadow"
@@ -80,7 +83,7 @@ export default function Gallery() {
           <Tab
             className={({ selected }) =>
               classNames(
-                "w-full rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
+                "w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
                 "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
                 selected
                   ? "bg-[#6352ff] bg-opacity-90 shadow"
@@ -89,13 +92,13 @@ export default function Gallery() {
             }
             onClick={() => showFeatured()}
           >
-            Featured
+            Features
           </Tab>
         </Tab.List>
 
         {/* TAB CONTENT */}
 
-        <Tab.Panels className="relative w-[85vw] mx-auto h-screen px-[6px] rounded-md rounded-t-none bg-gray-600 overflow-scroll shadow-900/20 border-[#6352ff] border-2 border-t-0 pt-2">
+        <Tab.Panels className="relative w-[85vw] mx-auto h-screen px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700 overflow-scroll  border-[#6352ff] border-4 border-t-0 pt-2">
           <Tab.Panel className="flex">
             {" "}
             <Masonry>
