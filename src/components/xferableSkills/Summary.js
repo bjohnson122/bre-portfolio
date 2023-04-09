@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Summary({ mobile }) {
   return (
-    <div>
+    <div className="mb-10">
       {mobile ? (
         <p className="relative w-[90vw] ml-[5%] text-sm mt-7 xl:text-base">
-          {`As a "Bre-of-a-few-trades", I have several talents, hobbies, and skills that I bring to the table. I am a mixed-media artist and had my work shown at several art exhibitions. In 2018, I transitioned to painting on tiny canvases as a nail artist. From creating trendy nail content for marketing to designing nail products that are currently sold in Anthropologie and on Amazon, I was able to let my talent lead the way.`}
+          {`As a "Bre-of-a-few-trades", I have several talents, hobbies, and skills that I bring to the table. I am a mixed-media artist and had my work shown at several art exhibitions around NYC. In 2018, I transitioned to painting on tiny canvases as a nail artist. From creating trendy nail content for marketing to designing nail products that are currently sold in Anthropologie and on Amazon, I was able to let my talent lead the way.`}
           <br />
           <br />
           Whether {`it's`} color coordination, picking the right tool for the
