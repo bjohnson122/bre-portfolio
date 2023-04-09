@@ -7,13 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
-const tabTitles = [
-  <HomeIcon key="null" />,
-  "Artist",
-  "Nail Artist",
-  "Features",
-];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -29,7 +22,9 @@ export default function WebGallery({ photos }) {
     const updatedPictures = photos.filter((ele) => {
       return ele.category == selectedCategory;
     });
-    setPictures(updatedPictures);
+    selectedCategory === ""
+      ? setPictures(photos)
+      : setPictures(updatedPictures);
   }
 
   const showFeatured = () => {
@@ -44,78 +39,45 @@ export default function WebGallery({ photos }) {
     setModal(true);
   };
 
+  const tabTitles = [
+    { text: <HomeIcon />, filter: "" },
+    { text: "Artist", filter: "art" },
+    { text: "Nail Artist", filter: "nails" },
+    { text: "Features", filter: showFeatured },
+  ];
   return (
-    <div
-      className="mt-6 pt-6 wrapper"
-      onScroll={() => window.addEventListener("scroll", scrollTo(0, 330))}
-    >
+    <div className="mt-6 pt-6 wrapper">
       <Tab.Group>
-        {/* TAB TITLE */}
+  
+    {/* TAB TITLES */}
         <Tab.List
           className=" relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden pt-2  rounded-b-none pb-2 justify-between 
-        pl-8
-        
-        "
+        pl-8"
         >
-          <Tab
-            className={({ selected }) =>
-              classNames(
-                " w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white ",
-                "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
-                selected
-                  ? "bg-[#6352ff] bg-opacity-90 shadow"
-                  : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
-              )
-            }
-            onClick={() => setPictures(photos)}
-          >
-            {<HomeIcon />}
-          </Tab>
-          <Tab
-            className={({ selected }) =>
-              classNames(
-                "w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
-                "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
-                selected
-                  ? "bg-[#6352ff] bg-opacity-90 shadow"
-                  : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
-              )
-            }
-            onClick={() => filterPictures("art")}
-          >
-            Artist
-          </Tab>
-          <Tab
-            className={({ selected }) =>
-              classNames(
-                "w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
-                "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
-                selected
-                  ? "bg-[#6352ff] bg-opacity-90 shadow"
-                  : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
-              )
-            }
-            onClick={() => filterPictures("nails")}
-          >
-            Nail Artist
-          </Tab>
-          <Tab
-            className={({ selected }) =>
-              classNames(
-                "w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
-                "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
-                selected
-                  ? "bg-[#6352ff] bg-opacity-90 shadow"
-                  : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
-              )
-            }
-            onClick={() => showFeatured()}
-          >
-            Features
-          </Tab>
+          {tabTitles.map(({ text, filter }, idx) => {
+            return (
+              <Tab
+                key={idx}
+                className={({ selected }) =>
+                  classNames(
+                    "w-[85%] rounded-xl py-2.5 px-2 text-sm font-medium leading-5 text-white",
+                    "ring-white ring-opacity-90 focus:outline-none focus:ring-2",
+                    selected
+                      ? "bg-[#6352ff] bg-opacity-90 shadow"
+                      : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
+                  )
+                }
+                onClick={() =>
+                  text == "Features" ? showFeatured() : filterPictures(filter)
+                }
+              >
+                {text}
+              </Tab>
+            );
+          })}
         </Tab.List>
 
-        {/* TAB CONTENT */}
+    {/* TAB CONTENT */}
 
         <Tab.Panels
           className={`relative h-[82vh] md:h-[85vh] w-[85vw] mx-auto px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700  shadow-lg border-[#6352ff] border-4 border-t-0 
@@ -125,15 +87,21 @@ export default function WebGallery({ photos }) {
             return (
               <Tab.Panel className="flex" key={idx}>
                 <Masonry>
-                  {pictures.map(({ imageSrc }, idx) => {
+                  {pictures.map(({ imageSrc,link }, idx) => {
                     return (
                       <div key={idx}>
                         <Fade>
-                          <Image
+                          {link ? <Link href={link}   target="_blank"
+          rel="noopener noreferrer"> <Image
                             src={imageSrc}
                             alt="test"
                             className="block cursor-pointer p-1 rounded-lg"
-                          />
+                          /></Link> : <Image
+                          src={imageSrc}
+                          alt="test"
+                          className="block cursor-pointer p-1 rounded-lg"
+                        />}
+                         
                         </Fade>
                       </div>
                     );
