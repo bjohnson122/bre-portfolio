@@ -3,7 +3,7 @@ import { Tab } from "@headlessui/react";
 import HomeIcon from "@mui/icons-material/Home";
 import Masonry from "react-responsive-masonry";
 import Image from "next/image";
-import mobilePhotos from "./photosMobileScreen";
+
 import Link from "next/link";
 
 const tabTitles = [
@@ -17,24 +17,24 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function MobileGallery() {
-  const [pictures, setPictures] = useState(mobilePhotos);
+export default function MobileGallery({photos}) {
+  const [pictures, setPictures] = useState(photos);
   function filterPictures(selectedCategory) {
-    const updatedPictures = mobilePhotos.filter((ele) => {
+    const updatedPictures = photos.filter((ele) => {
       return ele.category == selectedCategory;
     });
     setPictures(updatedPictures);
   }
 
   const showFeatured = () => {
-    const featuredContent = mobilePhotos.filter((ele) => {
+    const featuredContent = photos.filter((ele) => {
       return ele.featured == true;
     });
     setPictures(featuredContent);
   };
 
   return (
-    <div className=" h-[full] w-screen pt-12 ">
+    <div className=" h-[full] w-screen pt-12 overflow-hidden">
       <Tab.Group>
         {/* TAB TITLE */}
         <Tab.List
@@ -51,7 +51,7 @@ export default function MobileGallery() {
                   : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
               )
             }
-            onClick={() => setPictures(mobilePhotos)}
+            onClick={() => setPictures(photos)}
           >
             {<HomeIcon />}
           </Tab>
