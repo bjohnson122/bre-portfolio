@@ -13,7 +13,7 @@ import kawsP from "/public/xfer/kawsP.jpeg";
 import kawsSSNails from "/public/xfer/kawsSSNails.jpg";
 import kendrick from "/public/xfer/kendrick.jpg";
 import money from "/public/xfer/money.jpg";
-import kehlani from "/public/xfer/negativeDrawing.jpg";
+import kehlani from "/public/xfer/negativeDrawing.png";
 import nipsey from "/public/xfer/nipsey.jpg";
 import pac from "/public/xfer/pac.jpg";
 import purpleNails from "/public/xfer/purpleNails.jpg";
