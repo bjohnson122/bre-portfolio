@@ -93,7 +93,7 @@ export default function WebGallery({ photos }) {
 
         {/* TAB CONTENT */}
         <Tab.Panels
-          className={`relative h-[82vh] md:h-[85vh] w-[85vw] mx-auto px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700  shadow-lg border-[#6352ff] border-4 border-t-0 
+          className={`relative h-[76vh] md:h-[80vh] w-[85vw] mx-auto px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700  shadow-lg border-[#6352ff] border-4 border-t-0 
        ${isInView ? "overflow-scroll" : "overflow-hidden"}`}
         >
           {tabTitles.map((title, idx) => {
@@ -143,7 +143,7 @@ export default function WebGallery({ photos }) {
           })}
         </Tab.Panels>
       </Tab.Group>
-      <div ref={ref} className="h-1 pb-5 overflow-hidden"></div>
+      <div ref={ref} className="h-1 overflow-hidden"></div>
     </div>
   );
 }
