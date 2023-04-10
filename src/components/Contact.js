@@ -10,7 +10,6 @@ import {
   useSpring,
 } from "framer-motion";
 
-
 export default function Contact() {
   const { scrollYProgress } = useScroll();
 
@@ -24,17 +23,13 @@ export default function Contact() {
   const isInView = useInView(ref);
 
   return (
-    <div
-      className="h-[80vh] w-screen overflow-hidden dark:bg"
-      id="contact"
-      ref={ref}
-    >
+    <div className="h-[80vh] w-screen overflow-hidden" id="contact" ref={ref}>
       {/* TRANSLATE TEXT ON X AXIS */}
 
       {isInView && (
         <motion.div
           style={{ x }}
-          className="w-screen font-zidan text-center  mt-32 tracking-[.085em] text-[4rem] sm:text-[7.75rem] sm:absolute sm:opacity-20 sm:text-[#000000] md:text-[12rem] md:mt-[22vh]  md:opacity-[30%]md:pl-7"
+          className="w-screen font-zidan text-center  mt-32 tracking-[.085em] text-[4rem] sm:text-[7.75rem] sm:absolute sm:opacity-20 sm:text-[#000000] md:text-[12rem] md:mt-[22vh]  md:opacity-[20%] md:text-[#16123a] md:pl-7"
         >
           Contact
         </motion.div>
@@ -45,15 +40,15 @@ export default function Contact() {
 
       {/* SOCIAL ICONS */}
       <div
-        className="scale-[2.7] mt-12 p-4 z-50 text-[#493dbe] space-x-5 text-center sm:scale-[2.5] sm:mt-[12.5rem] 
-        md:scale-[3.2] md:space-x-10  md:mt-72  "
+        className="scale-[2.7] mt-12 p-4 z-50 text-[#5845fd] space-x-5 text-center sm:scale-[2.5] sm:mt-[12.5rem] 
+        md:scale-[3.2] md:space-x-10  md:mt-72   "
       >
         <a
           href="https://www.linkedin.com/in/breanaj/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LinkedIn />
+          <LinkedIn className="" />
         </a>
         <a
           href="mailto:brecjohnson@gmail.com"
