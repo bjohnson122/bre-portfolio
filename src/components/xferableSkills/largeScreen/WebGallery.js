@@ -130,7 +130,7 @@ export default function WebGallery({ photos }) {
                           <Image
                             src={imageSrc}
                             alt="test"
-                            className="block cursor-pointer p-1 rounded-lg"
+                            className="block cursor-pointer p-1 rounded-lg hover:opacity-95 hover:transition-opacity"
                             onClick={() => openLightBox(idx)}
                           />
                         </Fade>

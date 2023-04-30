@@ -4,10 +4,9 @@ import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import MobilePNYC from "/public/MobilePNYC.png";
 import ComputerPNYC from "/public/ComputerPNYC.png";
 import TextContainer from "./TextContainer";
-
+import Tilt from "react-parallax-tilt";
 
 import { useInView } from "framer-motion";
-
 
 const rm = { top: 100, right: 20, bottom: 0, left: 80 };
 
@@ -23,23 +22,24 @@ export default function Project({ title, img, description, type, role }) {
   }
 
   return (
-    <div>
+    <div className="flex">
       {console.log(isInView, "image in view")}
-      <div  className={`${isInView ? 'fixed' : 'relative'}`}></div>
+
       <TextContainer
-        title={title} 
+        title={title}
         description={description}
         type={type}
         role={role}
-       
-       
       />
-   
-      <div className="w-1/2 top-0 ml-[50%] flex">
+
+      <div className="top-[10vh] w-1/2 h-[120vh] flex-col bg-green-500">
         <ParallaxProvider>
-          <Parallax speed={34}>
-            <Image src={img} alt={title} ref={ref} />
+          <Parallax speed={60} className="pt-40">
+            <Tilt tiltReverse={true} perspective={900} transitionSpeed={1500}>
+              <Image src={img} alt={title} ref={ref} />
+            </Tilt>
           </Parallax>
+         
         </ParallaxProvider>
       </div>
     </div>

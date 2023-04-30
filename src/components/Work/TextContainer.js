@@ -10,9 +10,9 @@ export default function TextContainer({ title, img, description, type, role , po
  
   return (
     // entire container
-    <div className={` top-1/3 left-0 flex flex-col flex-nowrap w-1/2 text-center`} >
+    <div className={`text-center w-1/2 h-[screen]  bg-pink-50`} >
       {/*Project Title  */}
-      <div className="text-3xl sm:text-5xl lg:text-7xl">{title}</div>
+      <div className="text-3xl sm:text-5xl mt-[50vh] lg:text-7xl">{title}</div>
 
       {/* Project Description */}
       <div className="pt-[2%] text-xl sm:text-2xl lg:text-3xl">
