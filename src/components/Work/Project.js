@@ -22,15 +22,16 @@ export default function Project({ title, img, description, type, role }) {
   }
 
   return (
-    <div className="flex">
+    <div className="flex ">
       {console.log(isInView, "image in view")}
-
+      {/* Text on the Left Side of the Screen */}
       <TextContainer
         title={title}
         description={description}
         type={type}
         role={role}
       />
+      {/* Parallax Images on the Right Side of the Screen */}
 
       <div className="top-[10vh] w-1/2 h-[120vh] flex-col bg-green-500">
         <ParallaxProvider>
@@ -39,7 +40,6 @@ export default function Project({ title, img, description, type, role }) {
               <Image src={img} alt={title} ref={ref} />
             </Tilt>
           </Parallax>
-         
         </ParallaxProvider>
       </div>
     </div>
