@@ -4,7 +4,7 @@ import PortfolioProjects from "@/components/Work/PortfolioProjects";
 
 export default function Projects() {
   return (
-    <div id="projects" className="bg-[#f6f6f6]">
+    <div id="projects" className="bg-white">
       <PortfolioProjects />
      
       
