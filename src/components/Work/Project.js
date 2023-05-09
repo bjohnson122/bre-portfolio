@@ -2,7 +2,7 @@ import React from "react";
 import ParallaxProjectImages from "./ParallaxProjectImages";
 import TextContainer from "./TextContainer";
 
-export default function Project({ title, img, description, type, role }) {
+export default function Project({ title, img, description, type, role, demoLink }) {
 
 
   return (
@@ -13,6 +13,7 @@ export default function Project({ title, img, description, type, role }) {
         description={description}
         type={type}
         role={role}
+        demoLink={demoLink}
       />
 
       {/* Parallax Images on the Right Side of the Screen */}
