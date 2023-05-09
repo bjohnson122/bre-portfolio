@@ -29,10 +29,10 @@ const skills = [
   { src: gatsby, text: "Gatsby" },
   { src: node, text: "Node" },
   { src: postgresql, text: "PostgreSQL" },
-  { src: firebase, text: "Firebase" },
+  // { src: firebase, text: "Firebase" },
    { src: gitIcon, text: "Git" },
   { src: procreate, text: "Procreate" },
-  { src: spline, text: "Spline" },
+  // { src: spline, text: "Spline" },
 ];
 
 const skillsList = [
@@ -82,9 +82,9 @@ export default function Skills() {
 
       <div>
         <span
-          className=" grid grid-cols-7 gap-1  grid-rows-2 mx-2 items-center justify-center 
+          className=" grid grid-cols-6 gap-1  grid-rows-2 mx-2 items-center justify-center 
           
-          sm:grid sm:gap-4 sm:mx-[10%] sm:grid-cols-7 sm:grid-rows-2 sm:px-8 
+          sm:grid sm:gap-4 sm:mx-[10%] sm:grid-cols-6 sm:grid-rows-2 sm:px-8 
         
           md:mx-5 md:pl-[85px] space-y-2 md:py-8
 "
