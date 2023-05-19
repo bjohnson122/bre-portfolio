@@ -16,7 +16,7 @@ export default function ButtonLink() {
               className={` rounded-full bg-gray-800 text-white shadow-md  shadow-[#6352ff]/40 p-1 px-2 ${"animate__animated animate__headShake"}  sm:text-sm text-[.55rem] `}
               ref={ref}
             >
-              Checkout my non-technical portfolio and transferable skills here!
+              Check out my non-technical portfolio and transferable skills here!
             </button>
           )}
         </Link>

@@ -68,7 +68,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <motion.div {...skillsTextAnimation} className="h-[90vh] w-screen p-2  ">
+    <motion.div {...skillsTextAnimation} className="h-[85vh] pb-14 w-screen p-2  ">
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
         <div className="flex-grow border-t-2 border-[#6352ff] font-bold mt-4"></div>
