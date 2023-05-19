@@ -26,7 +26,7 @@ const shownProjects = [
     title: "Book Worm",
     img: BookWormImage,
     // img: [BookWormImage],
-    description: "An online book-selling site that has user authentication, a persistent cart, and guest features. This site makes use of the New York Times and Google Books API.",
+    description: "Book Worm is an e-commerce site that sells books. This website has user authentication, a persistent cart, and guest features. All of the books products displayed are from the New York Times and Google Books API.",
     type: "eCommerce Webpage",
     role: "Full-Stack Developer",
     demoLink: 'https://book-worm.onrender.com/',
@@ -41,7 +41,7 @@ export default function PortfolioProjects() {
   return (
     <div className="text-center p-2 mt-14">
           <div
-        className="font-zidan text-center text-4xl
+        className="font-zidan text-left text-4xl
       sm:text-right sm:m-3 sm:ml-12 
       md:text-6xl
       lg:ml-16 
@@ -49,7 +49,7 @@ export default function PortfolioProjects() {
       "
       >
         <Slide duration={1000} triggerOnce={true} direction={'right'}>
-          <p className="text-[#6352ff] mt-14 tracking-wide pr-6">{"<Projects />"}</p>
+          <p className="text-[#6352ff] sm:mt-14 tracking-wide pr-6">{"<Projects />"}</p>
         </Slide >
       </div>
       {/* <Project/> */}

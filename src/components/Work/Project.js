@@ -24,24 +24,7 @@ export default function Project({
         demoLink={demoLink}
         githubLink={githubLink}
       />
-      <div className="space-x-8 text-gray-100  font-semibold">
-        {/* LIVE DEMO BUTTON */}{" "}
-        <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40">
-          <a href={demoLink}>
-            Live Demo <LaunchOutlinedIcon className="text-sm" />
-          </a>
-        </button>
-        {/* GitHub */}
-        <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 mb-6">
-          <a href={githubLink}>
-            <GitHubIcon /> GitHub
-          </a>
-        </button>
-      </div>
-      <br />
-      <div className="">
-        <span className="font-semibold ">Role: </span> {role}
-      </div>
+      
     
       {/* Image */}
       <Image src={img} alt="alt" className="px-[20%]" />
