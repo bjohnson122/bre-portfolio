@@ -49,14 +49,14 @@ export default function PortfolioProjects() {
       "
       >
         <Slide duration={1000} triggerOnce={true} direction={'right'}>
-          <p className="text-[#6352ff] mt-14 tracking-wide">{"<Projects />"}</p>
+          <p className="text-[#6352ff] mt-14 tracking-wide pr-6">{"<Projects />"}</p>
         </Slide >
       </div>
       {/* <Project/> */}
       {shownProjects.map(({ title, img, description, type, role, demoLink, githubLink }, idx) => {
         return (
           <div key={idx} className={`relative`}>
-            <Fade duration={1200} delay={800} triggerOnce={true}>
+            <Fade duration={1000} delay={800} triggerOnce={true}>
             <Project
               title={title}
               description={description}
@@ -65,7 +65,7 @@ export default function PortfolioProjects() {
               img={img}
               demoLink={demoLink}
               githubLink={githubLink}
-            /><br className="mt-4"></br></Fade>
+            /></Fade>
           </div>
         );
       })}

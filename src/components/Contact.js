@@ -23,7 +23,7 @@ export default function Contact() {
   const isInView = useInView(ref);
 
   return (
-    <div className="h-[80vh] w-screen overflow-hidden" id="contact" ref={ref}>
+    <div className="h-[80vh] mt-[10vh] w-screen overflow-hidden" id="contact" ref={ref}>
       {/* TRANSLATE TEXT ON X AXIS */}
 
       {isInView && (
