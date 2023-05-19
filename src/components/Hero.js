@@ -14,12 +14,12 @@ export default function Hero() {
   const [isNavShowing, setIsNavShowing] = useState();
 
   return (
-    <div className="text-center relative h-screen pt-14 md:pt-3">
+    <div className=" relative h-screen pt-14 md:pt-3">
       {/* <Spline scene="https://prod.spline.design/tag35kXcZemH8sh2/scene.splinecode" className="h-screen -mt-28"/> */}
-      <p className="mt-0 text-xl ">Hi, my name is Breana and I am </p>{" "}
-      <div className="text-center text-xl flex">
+      <p className="mt-0 text-xl pl-8 text-left">Hi, my name is Breana and I am </p>{" "}
+      <div className="text-xl  pl-8  flex">
         {/* typewriter */}
-        <div className="font-raleway text-center text-xl justify-center items-center align-middle w-screen">
+        <div className="font-raleway text-left text-xl justify-center items-center align-middle w-screen">
           <Typewriter
             options={{ loop: true }}
             onInit={(typewriter) => {

@@ -33,7 +33,7 @@ export default function PortfolioProjects() {
   const isInView = useInView(ref);
 
   return (
-    <div className="pt-12 text-center p-2">
+    <div className="pt-12text-center p-2">
       {/* <Project/> */}
       {shownProjects.map(({ title, img, description, type, role, demoLink }, idx) => {
         return (

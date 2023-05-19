@@ -49,11 +49,11 @@ export default function App({ Component, pageProps }) {
 
       {/* {!loading && ( */}
       <div>
-        <Suspense>
+        {/* <Suspense> */}
           <Layout>
             <Component className="h-screen w-screen" {...pageProps} />
           </Layout>
-        </Suspense>
+        {/* </Suspense> */}
       </div>
       {/* )} */}
     </div>
