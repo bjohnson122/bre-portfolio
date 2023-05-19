@@ -44,12 +44,12 @@ export default function PortfolioProjects() {
         className="font-zidan text-center text-4xl
       sm:text-right sm:m-3 sm:ml-12 
       md:text-6xl
-      lg:ml-16
+      lg:ml-16 
       
       "
       >
         <Slide duration={1000} triggerOnce={true} direction={'right'}>
-          <p className="text-[#6352ff] tracking-wide">{"<Projects />"}</p>
+          <p className="text-[#6352ff] mt-14 tracking-wide">{"<Projects />"}</p>
         </Slide >
       </div>
       {/* <Project/> */}

@@ -9,7 +9,7 @@ export default function ButtonLink() {
 
   return (
     <div>
-      <div className="items-center text-center lg:pt-4 scale-110 lg:scale-125" ref={ref}>
+      <div className="items-center text-center lg:pt-4 scale-110 lg:scale-125 sm:pt-14" ref={ref}>
         <Link href="/transferable-skills">
           {isInView && (
             <button
