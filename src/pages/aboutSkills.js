@@ -4,21 +4,6 @@ import React, { useRef } from "react";
 import { Slide } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
 
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useInView,
-  useSpring,
-} from "framer-motion";
-
-const aboutTitleAnimation = {
-  key: "about title",
-  initial: { opacity: 0 },
-  animate: { opacity: [0, 0.5, 1] },
-  transition: { delay: 0.5, duration: 1, repeat: 0 },
-};
-
 export default function About() {
   return (
     <div className="pt-12" id="about">

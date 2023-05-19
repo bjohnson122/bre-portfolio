@@ -15,6 +15,7 @@ const shownProjects = [
     description: "An awesome app that hosts free events and resources in NYC.",
     type: "Progressive Web App",
     role: "Fullstack Developer and Graphic Designer",
+    demoLink: 'https://pocketnyc.onrender.com/'
   },
   {
     title: "Book Worm",
@@ -23,6 +24,7 @@ const shownProjects = [
     description: "A lovely book-selling site.",
     type: "eCommerce Webpage",
     role: "Fullstack Developer",
+    demoLink: 'https://book-worm.onrender.com/'
   },
 ];
 
@@ -31,9 +33,9 @@ export default function PortfolioProjects() {
   const isInView = useInView(ref);
 
   return (
-    <div className="pt-12 text-center p-2">
+    <div className="pt-12text-center p-2">
       {/* <Project/> */}
-      {shownProjects.map(({ title, img, description, type, role }, idx) => {
+      {shownProjects.map(({ title, img, description, type, role, demoLink }, idx) => {
         return (
           <div key={idx} className={`${isInView ? "fixed" : "relative"}`}>
             <Project
@@ -42,6 +44,7 @@ export default function PortfolioProjects() {
               type={type}
               role={role}
               img={img}
+              demoLink={demoLink}
             />
           </div>
         );
