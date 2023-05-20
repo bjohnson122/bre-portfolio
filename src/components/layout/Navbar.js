@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import MobileNav from "./MobileNav";
 import { motion, useScroll, useSpring } from "framer-motion";
+import Link from "next/link";
 
 const links = [
   {
@@ -124,12 +125,12 @@ console.log(counter, 'count')
       md:w-1/4 md:flex md:justify-around scroll-smooth md:text-md md:align-middle text-[#f7f7f7]`}
       >
         {/* DARK MODE */}
-        <button
+        {/* <button
           onClick={() => setDarkMode(!darkMode)}
           className="scale-75 pt-1"
         >
           {darkMode ? <LightModeOutlinedIcon /> : <DarkModeIcon />}
-        </button>
+        </button> */}
 
         {links.map((link, idx) => {
           return (
@@ -146,11 +147,11 @@ console.log(counter, 'count')
 top-0 left-0
 
         md:text-2xl md:text-center md:cursor-pointer tracking-wider "
-        onClick={() => {
-          window.scrollTo(0, 0);
-        }}
+        // onClick={() => {
+        //   window.scrollTo(0, 0);
+        // }}
       >
-        Breana Johnson
+        <Link href='/'>Breana Johnson</Link>
       </span>
 
       {/* Right side of navbar w/ SOCIAL links */}

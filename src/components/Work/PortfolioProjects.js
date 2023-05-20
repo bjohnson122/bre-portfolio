@@ -39,7 +39,7 @@ export default function PortfolioProjects() {
   const isInView = useInView(ref);
 
   return (
-    <div className="text-center p-2 mt-14">
+    <div className="text-center p-2 mt-10">
           <div
         className="font-zidan text-left text-4xl
       sm:text-right sm:m-3 sm:ml-12 
