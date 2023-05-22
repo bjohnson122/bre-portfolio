@@ -18,7 +18,7 @@ export default function Project({
   githubLink,
 }) {
   return (
-    <div className=" h-[75vh] sm:h-screen w-screen ">
+    <div className="border-indigo-900 border-8 h-screen w-screen ">
       {/* Text on the Left Side of the Screen */}
       <TextContainer
         title={title}
@@ -32,7 +32,7 @@ export default function Project({
     
       {/* Image */}
       <Tilt tiltReverse={true} perspective={4000} transitionSpeed={3500} scale={1.025}>
-      <Image src={img} alt="alt" className="px-[20%]" /></Tilt>
+      <Image src={img} alt="alt" className="sm:px-[10%] md:px-[20%]" /></Tilt>
       {/* <hr className="relative ml-[15%] border-[#6352ff] border-1 mt-20 w-[70%]"></hr> */}
       {/* <ParallaxProjectImages img={img} title={title} className='relative' /> */}
       {/* Parallax Images on the Right Side of the Screen*/}

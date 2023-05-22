@@ -23,7 +23,7 @@ width: 50%;
   return (
     // entire container
     // <TextContent>
-    <div className='p-2 lg:mt-16' >
+    <div className='p-2 ' >
       {/*Project Title  */}
       <div className="font-bold">
       <div className="text-3xl sm:text-5xl  lg:text-6xl pt-4 ">{title}</div>
