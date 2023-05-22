@@ -4,6 +4,10 @@ import Image from "next/image";
 import TextContainer from "./TextContainer";
 import LaunchOutlinedIcon from "@mui/icons-material/LaunchOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Tilt from "react-parallax-tilt";
+
+
+
 export default function Project({
   title,
   img,
@@ -14,7 +18,7 @@ export default function Project({
   githubLink,
 }) {
   return (
-    <div className="h-screen w-screen ">
+    <div className="border-indigo-900 border-8 h-screen w-screen ">
       {/* Text on the Left Side of the Screen */}
       <TextContainer
         title={title}
@@ -24,27 +28,12 @@ export default function Project({
         demoLink={demoLink}
         githubLink={githubLink}
       />
-      <div className="space-x-8 text-gray-100  font-semibold">
-        {/* LIVE DEMO BUTTON */}{" "}
-        <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40">
-          <a href={demoLink}>
-            Live Demo <LaunchOutlinedIcon className="text-sm" />
-          </a>
-        </button>
-        {/* GitHub */}
-        <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 mb-6">
-          <a href={githubLink}>
-            <GitHubIcon /> GitHub
-          </a>
-        </button>
-      </div>
-      <br />
-      <div className="">
-        <span className="font-semibold ">Role: </span> {role}
-      </div>
+      
     
       {/* Image */}
-      <Image src={img} alt="alt" className="px-[20%]" />
+      <Tilt tiltReverse={true} perspective={4000} transitionSpeed={3500} scale={1.025}>
+      <Image src={img} alt="alt" className="sm:px-[10%] md:px-[20%]" /></Tilt>
+      {/* <hr className="relative ml-[15%] border-[#6352ff] border-1 mt-20 w-[70%]"></hr> */}
       {/* <ParallaxProjectImages img={img} title={title} className='relative' /> */}
       {/* Parallax Images on the Right Side of the Screen*/}
     </div>

@@ -26,14 +26,14 @@ export default function App({ Component, pageProps }) {
     exit: { opacity: 0 },
   };
   // FIX THIS****
-  useEffect(() => {
-    // const loadDuration = setTimeout(() => {
-    //   setLoading(false);
-    // }, 5000);
-    // return () => {
-    //   clearTimeout(loadDuration);
-    // };
-  }, []);
+  // useEffect(() => {
+  //   const loadDuration = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000);
+  //   return () => {
+  //     clearTimeout(loadDuration);
+  //   };
+  // }, []);
 
   return (
     <div>
@@ -49,11 +49,11 @@ export default function App({ Component, pageProps }) {
 
       {/* {!loading && ( */}
       <div>
-        {/* <Suspense> */}
+        <Suspense>
           <Layout>
             <Component className="h-screen w-screen" {...pageProps} />
           </Layout>
-        {/* </Suspense> */}
+        </Suspense>
       </div>
       {/* )} */}
     </div>

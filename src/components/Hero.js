@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { useRouter } from "next/navigation";
-// import pic from "/public/Mini Room - Bre@2-725x473.png";
-import Image from "next/image";
-// import Spline from "@splinetool/react-spline";
+import meHeroImage from "/public/MeHero.png";
 
-// const Spline = React.lazy(() => import('@splinetool/react-spline'));
-// dark:bg-[#63637a]
+import Image from "next/image";
+import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   const router = useRouter();
   const [isNavShowing, setIsNavShowing] = useState();
 
   return (
-    <div className=" relative h-screen pt-14 md:pt-3">
-      {/* <Spline scene="https://prod.spline.design/tag35kXcZemH8sh2/scene.splinecode" className="h-screen -mt-28"/> */}
-      <p className="mt-0 text-xl pl-8 text-left">Hi, my name is Breana and I am </p>{" "}
-      <div className="text-xl  pl-8  flex">
-        {/* typewriter */}
-        <div className="font-raleway text-left text-xl justify-center items-center align-middle w-screen">
+    <div className="h-screen pt-14 md:pt-2 text-center sm:text-left bg-pink-600">
+      {/* Text Container */}
+      <p className=" text-xl md:text-4xl font-semibold sm:pl-8 mt-8">
+        Hi, my name is Breana and I am{" "}
+      </p>{" "}
+      {/* typewriter */}
+      <div className="text-xl sm:pl-8">
+        <div className="font-raleway text-xl justify-center items-center md:text-4xl font-semibold align-middle w-screen">
           <Typewriter
             options={{ loop: true }}
             onInit={(typewriter) => {
@@ -39,12 +39,24 @@ export default function Hero() {
                 .start();
             }}
           />
-        </div>
+        </div>{" "}
       </div>
-      <div className="animate-pulse text-[0.6rem] w-full cursor-default scroll-smooth absolute md:bottom-15 right-0 text-center bottom-[5rem]">
-        Scroll Down
+      <br />
+      {/* HERO IMAGE */}
+      <div className="w-auto absolute px-6 top-[30vh]">
+        <Image
+          src={meHeroImage}
+        
+          alt="Custom Spline Design of Myself"
+          className="bg-yellow-500  bg-opacity-30 sm:max-w-[55vw]"
+        />
+      </div>
+      <br />
+      {/* SCROLL BUTTON */}
+      <div className="animate-pulse text-[0.6rem] md:text-[0.75rem] text-center absolute top-[90vh] translate-y-full w-screen ">
+       
+        <span className="scroll-smooth cursor-pointer" onClick={() => router.push("/#about")}> Scroll Down
         <br />
-        <span className="scroll-smooth" onClick={() => router.push("/#about")}>
           <KeyboardDoubleArrowDownIcon />
         </span>
       </div>
