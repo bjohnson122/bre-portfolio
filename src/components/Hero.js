@@ -17,12 +17,12 @@ export default function Hero() {
       background: "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(99,82,255,0.7) 73%, rgba(99,82,255,1) 100%)"
     }}>
       {/* Text Container */}
-      <p className=" text-xl md:pl-7 sm:text-2xl md:text-4xl font-medium  mt-8">
+      <p className=" text-xl md:pl-24 md:mt-[15vh] sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium  mt-8 z-50">
         Hi, my name is Breana and I am{" "}
       </p>{" "}
       {/* typewriter */}
-      <div className="text-xl md:pl-8">
-        <div className="font-raleway text-xl justify-center items-center sm:text-2xl md:text-4xl font-medium align-middle w-screen">
+      <div className="text-xl md:pl-24">
+        <div className="font-raleway text-xl justify-center items-center sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium align-middle w-screen">
           <Typewriter
             options={{ loop: true }}
             onInit={(typewriter) => {
@@ -46,12 +46,12 @@ export default function Hero() {
       </div>
       <br />
       {/* HERO IMAGE */}
-      <div className="w-auto md:ml-[45vw] px-4">
+      <div className="w-auto  items-center md:ml-[45vw] px-5 md:-mt-[10vh]">
         <Image
           src={meHeroImage}
           width={600}
           alt="Custom Spline Design of Myself"
-          className="bg-yellow- "
+          className=""
         />
       </div>
       <br />
