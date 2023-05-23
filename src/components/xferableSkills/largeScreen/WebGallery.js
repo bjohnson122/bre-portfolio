@@ -80,10 +80,10 @@ export default function WebGallery({ photos }) {
                       ? "bg-[#6352ff] bg-opacity-90 shadow"
                       : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
                   )}
-                // }
-                // onClick={() =>
-                //   text == "Features" ? showFeatured() : filterPictures(filter)
-                // }
+                
+                onClick={() =>
+                 filterPictures(filter)
+                }
               >
                 {text}
               </Tab>
