@@ -7,19 +7,20 @@ import meHeroImage from "/public/MeHero.png";
 import Image from "next/image";
 import Spline from "@splinetool/react-spline";
 
+
 export default function Hero() {
   const router = useRouter();
   const [isNavShowing, setIsNavShowing] = useState();
 
   return (
-    <div className="h-screen pt-14 md:pt-2 text-center sm:text-left bg-pink-600">
+    <div className="h-screen pt-14 md:pt-2 text-center md:text-left  ">
       {/* Text Container */}
-      <p className=" text-xl md:text-4xl font-semibold sm:pl-8 mt-8">
+      <p className=" text-xl md:pl-7 sm:text-2xl md:text-4xl font-medium  mt-8">
         Hi, my name is Breana and I am{" "}
       </p>{" "}
       {/* typewriter */}
-      <div className="text-xl sm:pl-8">
-        <div className="font-raleway text-xl justify-center items-center md:text-4xl font-semibold align-middle w-screen">
+      <div className="text-xl md:pl-8">
+        <div className="font-raleway text-xl justify-center items-center sm:text-2xl md:text-4xl font-medium align-middle w-screen">
           <Typewriter
             options={{ loop: true }}
             onInit={(typewriter) => {
@@ -43,17 +44,17 @@ export default function Hero() {
       </div>
       <br />
       {/* HERO IMAGE */}
-      <div className="w-auto absolute px-6 top-[30vh]">
+      <div className="w-auto md:ml-[45vw] px-4">
         <Image
           src={meHeroImage}
-        
+          width={600}
           alt="Custom Spline Design of Myself"
-          className="bg-yellow-500  bg-opacity-30 sm:max-w-[55vw]"
+          className="bg-yellow- "
         />
       </div>
       <br />
       {/* SCROLL BUTTON */}
-      <div className="animate-pulse text-[0.6rem] md:text-[0.75rem] text-center absolute top-[90vh] translate-y-full w-screen ">
+      <div className="animate-pulse text-[0.7rem] md:text-[0.75rem] text-center absolute top-[90vh] translate-y-full w-screen ">
        
         <span className="scroll-smooth cursor-pointer" onClick={() => router.push("/#about")}> Scroll Down
         <br />

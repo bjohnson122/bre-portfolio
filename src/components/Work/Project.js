@@ -18,7 +18,7 @@ export default function Project({
   githubLink,
 }) {
   return (
-    <div className="border-indigo-900 border-8 h-screen">
+    <div className="h-screen">
       {/* Text on the Left Side of the Screen */}
       <TextContainer
         title={title}
