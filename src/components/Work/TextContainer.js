@@ -26,7 +26,7 @@ width: 50%;
     <div className='p-2 ' >
       {/*Project Title  */}
       <div className="font-bold">
-      <div className="text-3xl sm:text-5xl  lg:text-6xl pt-4 ">{title}</div>
+      <div className="text-3xl sm:text-[2rem]  lg:text-6xl pt-4 ">{title}</div>
 
       {/* Project Description */}
       <div className="font-normal px-2 text-sm sm:text-base lg:px-12 py-4 pt-5 lg:text-xl">

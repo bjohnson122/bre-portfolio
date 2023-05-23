@@ -41,8 +41,8 @@ export default function PortfolioProjects() {
   return (
     <div className="text-center p-2 mt-10">
           <div
-        className="font-zidan text-left text-4xl
-      sm:text-right sm:m-3 sm:ml-12 
+        className="font-zidan text-left xs:ml-3  text-4xl
+      sm:text-right sm:m-3 sm:ml-12 sm:text-5xl
       md:text-6xl
       lg:ml-16 
       

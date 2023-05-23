@@ -13,7 +13,9 @@ export default function Hero() {
   const [isNavShowing, setIsNavShowing] = useState();
 
   return (
-    <div className="h-screen pt-14 md:pt-2 text-center md:text-left  ">
+    <div className="h-screen pt-14 md:pt-2 text-center md:text-left" style={{
+      background: "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(99,82,255,0.7) 73%, rgba(99,82,255,1) 100%)"
+    }}>
       {/* Text Container */}
       <p className=" text-xl md:pl-7 sm:text-2xl md:text-4xl font-medium  mt-8">
         Hi, my name is Breana and I am{" "}
@@ -56,7 +58,7 @@ export default function Hero() {
       {/* SCROLL BUTTON */}
       <div className="animate-pulse text-[0.7rem] md:text-[0.75rem] text-center absolute top-[90vh] translate-y-full w-screen ">
        
-        <span className="scroll-smooth cursor-pointer" onClick={() => router.push("/#about")}> Scroll Down
+        <span className="scroll-smooth cursor-pointer" onClick={() => router.push("/#about")}> Learn More
         <br />
           <KeyboardDoubleArrowDownIcon />
         </span>
