@@ -38,12 +38,12 @@ export default function WebGallery({ photos }) {
       : setPictures(updatedPictures);
   }
 
-  const showFeatured = () => {
-    const featuredContent = photos.filter((ele) => {
-      return ele.featured == true;
-    });
-    setPictures(featuredContent);
-  };
+  // const showFeatured = () => {
+  //   const featuredContent = photos.filter((ele) => {
+  //     return ele.featured == true;
+  //   });
+  //   setPictures(featuredContent);
+  // };
 
   const openLightBox = (index) => {
     setIndex(index);
@@ -58,14 +58,14 @@ export default function WebGallery({ photos }) {
     { text: <HomeIcon />, filter: "" },
     { text: "Artist", filter: "art" },
     { text: "Nail Artist", filter: "nails" },
-    { text: "Features", filter: showFeatured },
+    // { text: "Features", filter: showFeatured },
   ];
   return (
     <div className="mt-6 pt-6 wrapper">
       <Tab.Group>
         {/* TAB TITLES */}
         <Tab.List
-          className=" relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden pt-2  rounded-b-none pb-2 justify-between 
+          className=" relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-3 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden pt-2  rounded-b-none pb-2 justify-between 
         pl-8"
         >
           {tabTitles.map(({ text, filter }, idx) => {
@@ -79,10 +79,10 @@ export default function WebGallery({ photos }) {
                     selected
                       ? "bg-[#6352ff] bg-opacity-90 shadow"
                       : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
-                  )
-                }
+                  )}
+                
                 onClick={() =>
-                  text == "Features" ? showFeatured() : filterPictures(filter)
+                 filterPictures(filter)
                 }
               >
                 {text}

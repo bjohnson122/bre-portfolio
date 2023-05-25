@@ -118,7 +118,7 @@ export default function Skills() {
             className="w-screen  text-[0.68rem] list-outside items-center justify-center px-2 mx-[1%] pl-[2.5%] mt-3
               xs:mx-[5%] xs:text-[.9rem]
              
-              sm:flex-col sm:ml-[5%] sm:w-[70%]
+              sm:flex-col sm:ml-[5%] sm:w-[75%]
              
               md:grid md:grid-cols-2 md:gap-x-3 md:grid-rows-3 md:w-screen md:text-[0.9rem] md:ml-[3%] 
 

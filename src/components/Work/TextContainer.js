@@ -26,7 +26,7 @@ width: 50%;
     <div className='p-2 ' >
       {/*Project Title  */}
       <div className="font-bold">
-      <div className="text-3xl sm:text-5xl  lg:text-6xl pt-4 ">{title}</div>
+      <div className="text-3xl sm:text-[2rem]  lg:text-6xl pt-4 ">{title}</div>
 
       {/* Project Description */}
       <div className="font-normal px-2 text-sm sm:text-base lg:px-12 py-4 pt-5 lg:text-xl">
@@ -40,13 +40,13 @@ width: 50%;
       </div>
       <div className="space-x-8 text-sm sm:text-base text-gray-100 mt-3  font-semibold">
         {/* LIVE DEMO BUTTON */}{" "}
-        <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40">
+        <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 hover:opacity-90">
           <a href={demoLink}>
             Live Demo <LaunchOutlinedIcon className="text-sm" />
           </a>
         </button>
         {/* GitHub */}
-        <button className="bg-[#6352ff] text-sm sm:text-base p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 mb-4">
+        <button className="bg-[#6352ff] text-sm sm:text-base p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 mb-4  hover:opacity-90">
           <a href={githubLink}>
             <GitHubIcon /> GitHub
           </a>

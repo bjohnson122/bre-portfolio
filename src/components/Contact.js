@@ -23,13 +23,13 @@ export default function Contact() {
   const isInView = useInView(ref);
 
   return (
-    <div className="h-[80vh] xl:mt-[10vh] w-screen overflow-hidden" id="contact" ref={ref}>
+    <div className="h-[80vh] lg:h-screen bg-[#6352ff08] xl:mt-[10vh] w-screen overflow-hidden" id="contact" ref={ref}>
       {/* TRANSLATE TEXT ON X AXIS */}
 
       {isInView && (
         <motion.div
           style={{ x }}
-          className="w-screen font-zidan text-center ml-4 mt-[25vh]  tracking-[.085em] text-[4rem] sm:text-[7.75rem] sm:absolute sm:opacity-20 sm:text-[#000000] md:text-[12rem] md:mt-[22vh]  md:opacity-[20%] md:text-[#16123a] md:pl-7"
+          className="w-screen font-zidan text-center ml-4 mt-[17vh]  tracking-[.085em] text-[4rem] sm:text-[7.75rem] sm:absolute sm:mt-[25vh] sm:opacity-20 sm:text-[#000000] md:text-[12rem] md:mt-[22vh]  md:opacity-[20%] md:text-[#16123a] md:pl-7 "
         >
           Contact
         </motion.div>
