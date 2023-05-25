@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function About() {
   return (
-    <div className="pt-12" id="about">
+    <div className="pt-12 bg-[#6352ff08]" id="about">
       <div
         className="font-zidan text-center text-4xl
       sm:text-left sm:m-3 sm:ml-12 sm:text-5xl

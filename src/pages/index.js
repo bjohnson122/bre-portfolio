@@ -7,13 +7,12 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
+    < div className="">
+      <Hero/>
       <About />
-      <div className="relative">
+      
       <Projects />
-      </div>
       <Contact />
-    </>
+    </div>
   );
 }

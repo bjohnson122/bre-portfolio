@@ -48,10 +48,10 @@ export default function App({ Component, pageProps }) {
       )} */}
 
       {/* {!loading && ( */}
-      <div>
+      <div className="">
         <Suspense>
           <Layout>
-            <Component className="h-screen w-screen" {...pageProps} />
+            <Component className="h-screen w-screen bg-[#6352ff1a]" {...pageProps} />
           </Layout>
         </Suspense>
       </div>

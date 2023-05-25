@@ -96,7 +96,6 @@ function Navbar() {
       setMobile(window.innerWidth < 870 ? true : false);
     };
 counter++
-console.log(counter, 'count')
     updateMobile();
     window.addEventListener("resize", updateMobile);
     return () => {
