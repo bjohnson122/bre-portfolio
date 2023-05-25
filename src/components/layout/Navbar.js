@@ -108,13 +108,13 @@ counter++
       className={`${counter < 2 ? "md:hidden" : "md:show"} 
       ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
       flex w-screen list-none p-3 h-10 
-      md:h-14  md:align-center bg-[#7060ff]
+      md:h-14  md:align-center
      
-      dark:bg-[#1c1c23]  shadow-lg shadow-[#000000]/40 dark:shadow-[#262626]/50
+      bg-[#1c1c23]  shadow-lg shadow-[#262626]/50
       md:transition-all md:duration-500  items-center md:text-md md:sticky fixed z-50 `}
     >
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[.15rem] lg:h-1 bg-[#7060ff] origin-left drop-shadow-md"
+        className="fixed top-0 left-0 right-0 h-[.25rem] lg:h-1 bg-[#8578ff]  origin-left drop-shadow-md"
         style={{ scaleX }}
       />
       {/* Left side of navbar w/ page links */}
@@ -142,7 +142,7 @@ counter++
 
       {/* Logo */}
       <span
-        className="text-[1.23rem] font-zidan text-left text-[#262626] dark:text-[#6352ff] w-1/2
+        className="text-[1.23rem] font-zidan text-left text-[#6352ff] w-1/2
 top-0 left-0
 
         md:text-2xl md:text-center md:cursor-pointer tracking-wider "
