@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ArticleIcon from "@mui/icons-material/Article";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -55,7 +53,6 @@ function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState(null);
 
   useEffect(() => {
-  
     let lastScrollY = window.pageYOffset;
 
     const updateScrollDirection = () => {
@@ -95,7 +92,7 @@ function Navbar() {
     const updateMobile = () => {
       setMobile(window.innerWidth < 870 ? true : false);
     };
-counter++
+    counter++;
     updateMobile();
     window.addEventListener("resize", updateMobile);
     return () => {
@@ -146,11 +143,8 @@ counter++
 top-0 left-0
 
         md:text-2xl md:text-center md:cursor-pointer tracking-wider "
-        // onClick={() => {
-        //   window.scrollTo(0, 0);
-        // }}
       >
-        <Link href='/'>Breana Johnson</Link>
+        <Link href="/">Breana Johnson</Link>
       </span>
 
       {/* Right side of navbar w/ SOCIAL links */}

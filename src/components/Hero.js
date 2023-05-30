@@ -67,10 +67,12 @@ export default function Hero() {
             <Link href="/#contact">Get in touch</Link> to explore how my
             experience in building scalable applications can bring your ideas to
             life.
-            <br></br>
-            <button className="rounded-full bg-[#6352ff] p-1 px-8 text-white text-base lg:text-lg ml-[14vw] md:mt-16">
-              {"Let's"} Chat!
-            </button>
+            <br></br>{" "}
+            <Link href={"https://calendly.com/breanaj/chat"}>
+              <button className="rounded-full bg-[#6352ff] p-1 px-8 text-white text-base lg:text-lg ml-[14vw] md:mt-16">
+                {"Let's"} Chat!
+              </button>
+            </Link>
           </div>
         )}
       </div>
