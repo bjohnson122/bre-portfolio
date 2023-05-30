@@ -4,7 +4,6 @@ import Meta from "@/components/layout/Meta";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-//pt-[calc(100vh/3.5)]
 
 const loaderSmallTextAnimation = {
   key: "loader text",

@@ -17,7 +17,7 @@ import spline from "/public/icons/spline.png";
 import SkillsIcon from "./SkillsIcon";
 
 import { motion } from "framer-motion";
-// FIX THE ICONS
+
 const skills = [
   { src: html, text: "HTML" },
   { src: css, text: "CSS" },
@@ -29,10 +29,8 @@ const skills = [
   { src: gatsby, text: "Gatsby" },
   { src: node, text: "Node" },
   { src: postgresql, text: "PostgreSQL" },
-  // { src: firebase, text: "Firebase" },
-   { src: gitIcon, text: "Git" },
+  { src: gitIcon, text: "Git" },
   { src: procreate, text: "Procreate" },
-  // { src: spline, text: "Spline" },
 ];
 
 const skillsList = [

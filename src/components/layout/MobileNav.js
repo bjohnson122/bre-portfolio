@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ArticleIcon from "@mui/icons-material/Article";
 import { Fade } from "react-awesome-reveal";
 
@@ -64,12 +62,12 @@ export default function MobileNav() {
           <hr className="mx-40 mt-[6%]" />
 
           {/* SOCIAL ICONS */}
-          <ul className="text-center flex  py-[10%] justify-between mx-8 xs:mx-[10%] sm:mx-48">
+          <ul className="text-center flex  py-[10%] justify-between box-border mx-8 xs:mx-[10%] sm:mx-[20%] ">
             {socials.map((socialSite, idx) => {
               return (
                 <li key={idx} className="p-3 xs:p-0 sm:scale-125">
                   <a
-                    className="md:text-[0.6rem] text-xs md:block "
+                    className="md:text-[0.6rem] text-xs md:block hover:text-[#6352ff] "
                     href={socialSite.webLink}
                     target="_blank"
                     rel="noopener noreferrer"

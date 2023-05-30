@@ -18,12 +18,6 @@ function classNames(...classes) {
 
 export default function WebGallery({ photos }) {
   const [pictures, setPictures] = useState(photos);
-  const captionsRef = useRef(null);  
-  const [showToggle, setShowToggle] = React.useState(false);
-  const [descriptionMaxLines, setDescriptionMaxLines] = React.useState(3);
-  const [descriptionTextAlign, setDescriptionTextAlign] = React.useState(
-    "start"
-  );
   const [modalOpen, setModalOpen] = useState(false);
   const [index, setIndex] = React.useState(-1);
   const ref = useRef(null);
@@ -38,12 +32,12 @@ export default function WebGallery({ photos }) {
       : setPictures(updatedPictures);
   }
 
-  // const showFeatured = () => {
-  //   const featuredContent = photos.filter((ele) => {
-  //     return ele.featured == true;
-  //   });
-  //   setPictures(featuredContent);
-  // };
+  const showFeatured = () => {
+    const featuredContent = photos.filter((ele) => {
+      return ele.featured == true;
+    });
+    setPictures(featuredContent);
+  };
 
   const openLightBox = (index) => {
     setIndex(index);
@@ -79,11 +73,9 @@ export default function WebGallery({ photos }) {
                     selected
                       ? "bg-[#6352ff] bg-opacity-90 shadow"
                       : "text-[#6352ff] hover:bg-white/[0.12] hover:text-white"
-                  )}
-                
-                onClick={() =>
-                 filterPictures(filter)
+                  )
                 }
+                onClick={() => filterPictures(filter)}
               >
                 {text}
               </Tab>
@@ -104,24 +96,11 @@ export default function WebGallery({ photos }) {
                     open={index >= 0}
                     index={index}
                     close={closeLightBox}
-                    slides={pictures.map(({imageSrc}) =>  (imageSrc))}
-                    plugins={[Captions]} 
+                    slides={pictures.map(({ imageSrc }) => imageSrc)}
+                    plugins={[Captions]}
                   />
                 </>
-                {/* 
-                //   open={index >= 0}
-                    index={index}
-                    close={closeLightBox}
-                    slides={pictures.map((pic) => {
-                      return pic.imageSrc;
-                    })}
-                    plugins={[Captions]}
-                    captions={{ ref: captionsRef }}
-                    on={{
-                      click: () => {
-                        (captionsRef.current?.show);
-                      },
-                    }} */}
+
                 <Masonry>
                   {pictures.map(({ imageSrc, link }, idx) => {
                     return (
