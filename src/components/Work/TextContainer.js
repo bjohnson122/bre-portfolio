@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { useInView } from "framer-motion";
 import LaunchOutlinedIcon from "@mui/icons-material/LaunchOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -11,11 +10,8 @@ export default function TextContainer({
   demoLink,
   githubLink,
 }) {
-  const ref = useRef(null);
 
   return (
-    // entire container
-
     <div className="p-2 ">
       {/*Project Title  */}
       <div className="font-bold">

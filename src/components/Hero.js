@@ -5,11 +5,10 @@ import { useRouter } from "next/navigation";
 import meHeroImage from "/public/MeHero.png";
 import Link from "next/link";
 import Image from "next/image";
-import Spline from "@splinetool/react-spline";
+
 
 export default function Hero() {
   const router = useRouter();
-  const [isNavShowing, setIsNavShowing] = useState();
   const [mobile, setMobile] = useState(undefined);
 
   useEffect(() => {
@@ -68,7 +67,8 @@ export default function Hero() {
             experience in building scalable applications can bring your ideas to
             life.
             <br></br>{" "}
-            <Link href={"https://calendly.com/breanaj/chat"}>
+            <Link href={"https://calendly.com/breanaj/chat"} target="_blank"
+          rel="noopener noreferrer">
               <button className="rounded-full bg-[#6352ff] p-1 px-8 text-white text-base lg:text-lg ml-[14vw] md:mt-16">
                 {"Let's"} Chat!
               </button>
