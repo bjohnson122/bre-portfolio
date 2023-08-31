@@ -36,6 +36,7 @@
     "styled-components": "^5.3.10",
     "three": "^0.149.0",
     "typewriter-effect": "^2.19.0",
+    "word-wrap": "^1.2.5",
     "yet-another-react-lightbox": "^3.4.0"
   },
   "devDependencies": {
