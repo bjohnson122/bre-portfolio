@@ -136,7 +136,6 @@ function Navbar() {
           );
         })}
       </ul>
-
       {/* Logo */}
       <span
         className="text-[1.23rem] font-zidan text-left text-[#6352ff] w-1/2
@@ -146,7 +145,6 @@ top-0 left-0
       >
         <Link href="/">Breana Johnson</Link>
       </span>
-
       {/* Right side of navbar w/ SOCIAL links */}
       <ul
         className={`
