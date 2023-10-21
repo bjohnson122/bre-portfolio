@@ -14,7 +14,6 @@
     "@headlessui/react": "^1.7.13",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.6",
-    "@next/font": "13.1.4",
     "@react-three/drei": "^9.56.24",
     "@react-three/fiber": "^8.11.0",
     "@splinetool/loader": "^0.9.210",
