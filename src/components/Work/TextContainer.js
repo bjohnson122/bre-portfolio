@@ -5,7 +5,6 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 export default function TextContainer({
   title,
   description,
-  type,
   role,
   demoLink,
   githubLink,
