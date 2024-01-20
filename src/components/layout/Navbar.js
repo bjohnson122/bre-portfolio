@@ -78,7 +78,6 @@ function useScrollDirection() {
 function Navbar() {
   const scrollDirection = useScrollDirection();
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [mobile, setMobile] = useState(undefined);
   const { scrollYProgress } = useScroll();
 
@@ -102,13 +101,10 @@ function Navbar() {
 
   return (
     <div
-      className={`${counter < 2 ? "md:hidden" : "md:show"} 
-      ${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
+      className={`${scrollDirection === "down" ? "md:-top-24" : "md:top-0"} 
       flex w-screen list-none p-3 h-10 
-      md:h-14  md:align-center
-     
-      bg-[#1c1c23]  shadow-lg shadow-[#262626]/50
-      md:transition-all md:duration-500  items-center md:text-md md:sticky fixed z-50 `}
+      md:h-14  md:align-center bg-[#1c1c23]  shadow-lg shadow-[#262626]/50
+      md:transition-all md:duration-500  items-center md:text-md md:sticky fixed z-50`}
     >
       <motion.div
         className="fixed top-0 left-0 right-0 h-[.25rem] lg:h-1 bg-[#8578ff]  origin-left drop-shadow-md"
@@ -120,14 +116,6 @@ function Navbar() {
         className={` hidden
       md:w-1/4 md:flex md:justify-around scroll-smooth md:text-md md:align-middle text-[#f7f7f7]`}
       >
-        {/* DARK MODE */}
-        {/* <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="scale-75 pt-1"
-        >
-          {darkMode ? <LightModeOutlinedIcon /> : <DarkModeIcon />}
-        </button> */}
-
         {links.map((link, idx) => {
           return (
             <li className="md:pt-1" key={idx}>
