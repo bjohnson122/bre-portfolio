@@ -5,29 +5,28 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(glb|gltf)$/,
       use: {
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
           publicPath: "/_next/static/images",
           outputPath: "static/images/",
-        }
+        },
       },
     });
-    
+
     // For bin file
     config.module.rules.push({
       test: /\.(bin)$/,
       use: {
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
           publicPath: "/_next/static/images",
           outputPath: "static/images/",
-          name: 'hero3d.glb' // keep the original name
-        }
+          name: "hero3d.glb", // keep the original name
+        },
       },
     });
-  return config
-  }
-}
+    return config;
+  },
+};
 
-module.exports = nextConfig
- 
+module.exports = nextConfig;
