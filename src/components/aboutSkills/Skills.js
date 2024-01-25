@@ -3,8 +3,7 @@ import ButtonLink from "./ButtonLink";
 import html from "/public/icons/html.png";
 import css from "/public/icons/css.png";
 import procreate from "/public/icons/procreate.png";
-import firebase from "/public/icons/firebase.png";
-import gatsby from "/public/icons/gatsby.png";
+import ts from "/public/icons/ts.png";
 import jsIcon from "/public/icons/jsIcon.png";
 import nextJS from "/public/icons/nextjs.png";
 import node from "/public/icons/node.png";
@@ -13,7 +12,6 @@ import react from "/public/icons/react.png";
 import redux from "/public/icons/redux.png";
 import tailwind from "/public/icons/tailwind.png";
 import gitIcon from "/public/icons/gitIcon.png";
-import spline from "/public/icons/spline.png";
 import SkillsIcon from "./SkillsIcon";
 
 import { motion } from "framer-motion";
@@ -26,7 +24,7 @@ const skills = [
   { src: redux, text: "Redux" },
   { src: nextJS, text: "NextJS" },
   { src: tailwind, text: "Tailwind" },
-  { src: gatsby, text: "Gatsby" },
+  { src: ts, text: "TypeScript" },
   { src: node, text: "Node" },
   { src: postgresql, text: "PostgreSQL" },
   { src: gitIcon, text: "Git" },
@@ -66,26 +64,25 @@ export default function Skills() {
   }, []);
 
   return (
-    <motion.div {...skillsTextAnimation} className="h-full w-screen p-2  ">
+    <motion.div {...skillsTextAnimation} className="h-fit w-screen p-2">
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
-        <div className="flex-grow border-t-2 border-[#6352ff] font-bold mt-4"></div>
+        <div className="flex-grow border-t-2 border-[#6352ff] font-bold mt-4 ml-2"></div>
         <span className="flex-shrink mx-4  sm:text-xl font-semibold md:text-[1.37rem]">
           Skills
         </span>
-        <div className="flex-grow  border-t-2 border-[#6352ff] font-bold mt-4"></div>
+        <div className="flex-grow  border-t-2 border-[#6352ff] font-bold mt-4 mr-4"></div>
       </div>
 
       {/* ICONS */}
 
       <div>
         <span
-          className="grid grid-cols-6 gap-1  grid-rows-2 mx-2 items-center justify-center 
+          className="grid grid-cols-6 gap-6 grid-rows-2 mx-2 items-center justify-center 
           
           sm:grid sm:gap-4 sm:mx-[10%] sm:grid-cols-6 sm:grid-rows-2 sm:px-8 
         
-          md:mx-5 md:pl-[85px] space-y-2 md:py-8
-"
+          md:mx-5 md:pl-[85px] space-y-2 md:py-8  px-4"
         >
           {skills.map((skill, idx) => {
             return (

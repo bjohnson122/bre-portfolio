@@ -12,22 +12,19 @@ export default function Project({
   description,
   type,
   role,
-  demoLink,
   githubLink,
 }) {
   return (
-    <div className="h-fit pb-12">
+    <div className="h-fit w-screen pb-12">
       <TextContainer
         title={title}
         description={description}
         type={type}
         role={role}
-        demoLink={demoLink}
         githubLink={githubLink}
       />
-      
       <Tilt tiltReverse={true} perspective={4000} transitionSpeed={3500} scale={1.025}>
-      <Image src={img} alt="alt" className="sm:px-[10%] md:px-[20%]" /></Tilt>
+      <Image src={img} alt="alt" className={`px-12 md:px-[10%] w-screen ${title === "Book Worm" && 'md:px-[22%]'}`} /></Tilt>
     
     </div>
   );

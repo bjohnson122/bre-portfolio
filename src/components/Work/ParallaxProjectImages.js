@@ -1,15 +1,13 @@
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import { useInView } from "framer-motion";
 
 function ParallaxProjectImages({ img, title }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+
   return (
-    <div className="w-1/2 bg-green-500">
-      {console.log(isInView, "image in view")}
+    <div className="w-1/2">
       <Tilt
         tiltReverse={true}
         perspective={4000}

@@ -17,7 +17,7 @@ export default function AboutInfo() {
   }, []);
 
   return (
-    <div>
+    <div className="mt-16">
       <div>
         {/* FADE IN ⬇️ */}
         <p className="px-4 text-sm sm:text-base py-3 text-center  md:text-lg lg:text-xl lg:px-20 lg:pt-10 xl:text-2xl xl:px-36">
@@ -31,7 +31,7 @@ export default function AboutInfo() {
             artistic and graphic design
           </Link>{" "}
           skills to create simple, beautiful, and intuitive layouts for
-          applications and websites. When {"I'm"} not centering divs, {"you'll"}{" "}
+          applications and websites. When {"I'm"} not centering divs, {"you'll "}
           find me painting, drawing, or working out.
         </p>
       </div>

@@ -78,7 +78,7 @@ export default function Hero() {
       </div>
       <br />
       {/* HERO IMAGE */}
-      <div className="w-auto ml-0 items-center md:ml-[45vw] sm:ml-[10%] sm:mt-2 absolute px-5 md:-mt-[32%]">
+      <div className="w-fit md:ml-[45vw] sm:ml-[10%] sm:mt-32 mt-32 px-5 md:-mt-[32%] lg:-mt-82 xl:-mt-96 lg:pr-24 absolute xl:scale-105 xl:pl-36">
         <Image
           src={meHeroImage}
           width={610}
