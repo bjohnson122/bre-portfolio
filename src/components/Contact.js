@@ -33,7 +33,7 @@ export default function Contact() {
       {isInView && (
         <motion.div
           style={{ x }}
-          className="w-screen font-zidan text-center ml-4  tracking-[.085em] text-[4rem] mt-[15vh] sm:text-[7.75rem] sm:absolute sm:mt-[15vh] sm:opacity-20 sm:text-[#000000] md:text-[12rem] md:mt-[23vh]  md:opacity-[20%] md:text-[#16123a] md:pl-7"
+          className="w-screen font-zidan text-center ml-4  tracking-[.085em] text-[4rem] mt-[15vh] sm:text-[7.75rem] sm:absolute sm:mt-[15vh] sm:opacity-20 sm:text-[#000000] md:text-[12rem] md:mt-[24vh]  md:opacity-[20%] md:text-[#16123a] md:pl-7"
         >
           Contact
         </motion.div>
