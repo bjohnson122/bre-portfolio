@@ -5,8 +5,8 @@ import Contact from "../components/Contact";
 
 export default function Home() {
   return (
-    < div>
-      <Hero/>
+    <div className="overflow-hidden">
+      <Hero />
       <About />
       <Projects />
       <Contact />

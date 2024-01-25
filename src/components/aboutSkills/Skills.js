@@ -3,8 +3,7 @@ import ButtonLink from "./ButtonLink";
 import html from "/public/icons/html.png";
 import css from "/public/icons/css.png";
 import procreate from "/public/icons/procreate.png";
-import firebase from "/public/icons/firebase.png";
-import gatsby from "/public/icons/gatsby.png";
+import ts from "/public/icons/ts.png";
 import jsIcon from "/public/icons/jsIcon.png";
 import nextJS from "/public/icons/nextjs.png";
 import node from "/public/icons/node.png";
@@ -13,7 +12,6 @@ import react from "/public/icons/react.png";
 import redux from "/public/icons/redux.png";
 import tailwind from "/public/icons/tailwind.png";
 import gitIcon from "/public/icons/gitIcon.png";
-import spline from "/public/icons/spline.png";
 import SkillsIcon from "./SkillsIcon";
 
 import { motion } from "framer-motion";
@@ -26,7 +24,7 @@ const skills = [
   { src: redux, text: "Redux" },
   { src: nextJS, text: "NextJS" },
   { src: tailwind, text: "Tailwind" },
-  { src: gatsby, text: "Gatsby" },
+  { src: ts, text: "TypeScript" },
   { src: node, text: "Node" },
   { src: postgresql, text: "PostgreSQL" },
   { src: gitIcon, text: "Git" },

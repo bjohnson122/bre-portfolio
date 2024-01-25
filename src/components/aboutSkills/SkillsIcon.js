@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from "react";
+import React from "react";
 import Image from "next/image";
 import Tilt from 'react-parallax-tilt';
 
