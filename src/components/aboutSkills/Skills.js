@@ -66,26 +66,25 @@ export default function Skills() {
   }, []);
 
   return (
-    <motion.div {...skillsTextAnimation} className="h-full w-screen p-2  ">
+    <motion.div {...skillsTextAnimation} className="h-fit w-screen p-2">
       {/* Skills line break */}
       <div className="relative flex pb-4 items-center sm:px-6">
-        <div className="flex-grow border-t-2 border-[#6352ff] font-bold mt-4"></div>
+        <div className="flex-grow border-t-2 border-[#6352ff] font-bold mt-4 ml-2"></div>
         <span className="flex-shrink mx-4  sm:text-xl font-semibold md:text-[1.37rem]">
           Skills
         </span>
-        <div className="flex-grow  border-t-2 border-[#6352ff] font-bold mt-4"></div>
+        <div className="flex-grow  border-t-2 border-[#6352ff] font-bold mt-4 mr-4"></div>
       </div>
 
       {/* ICONS */}
 
       <div>
         <span
-          className="grid grid-cols-6 gap-1  grid-rows-2 mx-2 items-center justify-center 
+          className="grid grid-cols-6 gap-6 grid-rows-2 mx-2 items-center justify-center 
           
           sm:grid sm:gap-4 sm:mx-[10%] sm:grid-cols-6 sm:grid-rows-2 sm:px-8 
         
-          md:mx-5 md:pl-[85px] space-y-2 md:py-8
-"
+          md:mx-5 md:pl-[85px] space-y-2 md:py-8  px-4"
         >
           {skills.map((skill, idx) => {
             return (
