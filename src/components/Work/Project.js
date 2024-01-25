@@ -12,7 +12,6 @@ export default function Project({
   description,
   type,
   role,
-  demoLink,
   githubLink,
 }) {
   return (
@@ -22,10 +21,8 @@ export default function Project({
         description={description}
         type={type}
         role={role}
-        demoLink={demoLink}
         githubLink={githubLink}
       />
-      
       <Tilt tiltReverse={true} perspective={4000} transitionSpeed={3500} scale={1.025}>
       <Image src={img} alt="alt" className="sm:px-[10%] md:px-[20%]" /></Tilt>
     

@@ -26,13 +26,11 @@ export default function TextContainer({
       </div>
       <div className="space-x-8 text-sm sm:text-base text-gray-100 mt-3  font-semibold">
         {/* LIVE DEMO BUTTON */}
-        {title === "Book Worm" && (
-          <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 hover:opacity-90">
+          {/* <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 hover:opacity-90">
             <a href={demoLink}>
               Live Demo <LaunchOutlinedIcon className="text-sm" />
             </a>
-          </button>
-        )}
+          </button> */}
         {/* GitHub */}
         <button className="bg-[#6352ff] text-sm sm:text-base p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 mb-4  hover:opacity-90">
           <a href={githubLink}>

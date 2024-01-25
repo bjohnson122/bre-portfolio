@@ -13,7 +13,7 @@ const shownProjects = [
       'PocketNYC is a progressive web application that is a hub for free events and resources in NYC. This user-friendly project features a map, calendar, and a "favorites" section. The resources are even populated with real data courtesy of the NYC Open Data API.',
     type: "Progressive Web App",
     role: "Full-Stack Developer and Graphic Designer",
-    demoLink: "https://pocketnyc.onrender.com/",
+    demoLink: "",
     githubLink: "https://github.com/pocketNYC/pocketNYC",
   },
   {
@@ -23,7 +23,7 @@ const shownProjects = [
       "Book Worm is an e-commerce site that sells books. This website has user authentication, a persistent cart, and guest features. All of the books products displayed are from the New York Times and Google Books API.",
     type: "eCommerce Webpage",
     role: "Full-Stack Developer",
-    demoLink: "https://book-worm.onrender.com/",
+    demoLink: "",
     githubLink: "https://github.com/GraceShopper-Team-1/Grace-Shopper",
   },
 ];
@@ -61,7 +61,6 @@ export default function PortfolioProjects() {
                   type={type}
                   role={role}
                   img={img}
-                  demoLink={demoLink}
                   githubLink={githubLink}
                 />
               </Fade>
