@@ -3,7 +3,7 @@ import ButtonLink from "./ButtonLink";
 import html from "/public/icons/html.png";
 import css from "/public/icons/css.png";
 import procreate from "/public/icons/procreate.png";
-import ts from "/public/icons/ts.png";
+import ts from "/public/icons/TS.png";
 import jsIcon from "/public/icons/jsIcon.png";
 import nextJS from "/public/icons/nextjs.png";
 import node from "/public/icons/node.png";
