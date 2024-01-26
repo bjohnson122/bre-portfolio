@@ -19,11 +19,9 @@ export default function About() {
         </Slide>
       </div>
       <Fade duration={1200} delay={800} triggerOnce={true}>
-        <div className="h-full sm:h-[75vh] pb-14">
-          <AboutInfo />
-          <Skills />
-          <br />
-        </div>
+        <AboutInfo />
+        <Skills />
+        <br />
       </Fade>
     </div>
   );
