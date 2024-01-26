@@ -24,16 +24,17 @@ export default function Contact() {
 
   return (
     <div
-      className="sm:h-[70vh] lg:h-screen bg-[#6352ff08] w-screen overflow-hidden h-[fit] pb-28 sm:pb-0"
+      className="sm:h-[70vh] lg:h-[90vh] bg-[#6352ff08] w-screen overflow-hidden h-[fit] pb-28 sm:pb-0 "
       id="contact"
       ref={ref}
     >
       {/* TRANSLATE TEXT ON X AXIS */}
-
       {isInView && (
         <motion.div
           style={{ x }}
-          className="w-screen font-zidan text-center ml-4  tracking-[.085em] text-[4rem] mt-[15vh] sm:text-[7.75rem] sm:absolute sm:mt-[15vh] sm:opacity-20 sm:text-[#000000] md:text-[12rem] md:mt-[24vh]  md:opacity-[20%] md:text-[#16123a] md:pl-7"
+          className="w-screen font-zidan text-center ml-4 tracking-[.085em] text-[4rem] mt-[15vh] sm:text-[7.75rem] 
+          sm:absolute sm:mt-[15vh] sm:opacity-20 sm:text-[#000000] 
+          md:text-[12rem] md:mt-[26vh]  md:opacity-[20%] md:text-[#16123a] md:pl-7"
         >
           Contact
         </motion.div>
@@ -45,7 +46,7 @@ export default function Contact() {
       {/* SOCIAL ICONS */}
       <div
         className="scale-[2.7] mt-12 p-4 z-50 text-[#5845fd] space-x-5 text-center sm:scale-[2.5] sm:mt-[15.75rem] 
-        md:scale-[3.2] md:space-x-10  md:mt-[25rem]"
+        md:scale-[3.2] md:space-x-10  md:mt-[20rem]"
       >
         <a
           href="https://www.linkedin.com/in/breanaj/"
