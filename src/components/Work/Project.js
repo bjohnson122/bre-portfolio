@@ -12,6 +12,7 @@ export default function Project({
   description,
   type,
   role,
+  projectInfoLink,
   githubLink,
 }) {
   return (
@@ -21,6 +22,7 @@ export default function Project({
         description={description}
         type={type}
         role={role}
+        projectInfoLink={projectInfoLink}
         githubLink={githubLink}
       />
       <Tilt tiltReverse={true} perspective={4000} transitionSpeed={3500} scale={1.025}>

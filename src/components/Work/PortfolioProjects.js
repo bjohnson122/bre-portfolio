@@ -14,6 +14,7 @@ const shownProjects = [
     type: "Progressive Web App",
     role: "Full-Stack Developer and Graphic Designer",
     demoLink: "",
+    projectInfoLink:"/projects/pocketNYC",
     githubLink: "https://github.com/pocketNYC/pocketNYC",
   },
   {
@@ -47,7 +48,7 @@ export default function PortfolioProjects() {
       {/* <Project/> */}
       {shownProjects.map(
         (
-          { title, img, description, type, role, demoLink, githubLink },
+          { title, img, description, type, role, demoLink, githubLink, projectInfoLink },
           idx
         ) => {
           return (
@@ -59,6 +60,7 @@ export default function PortfolioProjects() {
                   type={type}
                   role={role}
                   img={img}
+                  projectInfoLink={projectInfoLink}
                   githubLink={githubLink}
                 />
               </Fade>
