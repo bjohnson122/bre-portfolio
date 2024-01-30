@@ -2,6 +2,7 @@ import React from "react";
 import Project from "./Project";
 import BookWormImage from "/public/ComputerBW.png";
 import pnycImages from "/public/res.png";
+import netflixCloneScreenshot from  '/public/netflixCloneScreenshot.png'
 import { Slide } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
 
@@ -16,6 +17,17 @@ const shownProjects = [
     demoLink: "",
     projectInfoLink:"/projects/pocketNYC",
     githubLink: "https://github.com/pocketNYC/pocketNYC",
+  },
+  {
+    title: "Netflix Clone",
+    img: netflixCloneScreenshot,
+    description:
+      'Created with technologies including React, Redux, and Firebase, this Netflix clone features real data from The Movie Database(TMDB)!',
+    type: "React App",
+    role: "Full-Stack Web Developer",
+    demoLink: "",
+    projectInfoLink:"/projects/netflix-clone",
+    githubLink: "https://github.com/bjohnson122/netflix-Clone-AsyncWeek",
   },
   {
     title: "Book Worm",
