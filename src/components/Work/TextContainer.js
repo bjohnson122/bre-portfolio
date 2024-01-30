@@ -14,7 +14,7 @@ export default function TextContainer({
     <div className="p-2">
       {/*Project Title  */}
       <div className="font-bold">
-        <div className="text-3xl sm:text-[2rem]  lg:text-6xl pt-4 ">
+        <div className="text-3xl sm:text-[2rem] tracking-wide lg:text-6xl pt-4 ">
           {title}
         </div>
 

@@ -8,10 +8,10 @@ import pnycScreenshot from "/public/pNYC/PNYC-screenshot.png";
 export default function PocketNYC() {
   return (
     <div className="h-full sm:m-16 m-6 mt-16">
-      <h1 className="text-center text-5xl font-bold mb-4">PocketNYC</h1>
+      <h1 className="text-center text-5xl font-bold mb-4 tracking-wide">PocketNYC</h1>
       <p className="font-zidan text-[#6352ff] text-2xl tracking-widest
       md:text-3xl">
-        TLDR;{" "}
+        TLDR;
       </p>
       <p className="ml-4 sm:ml-6 text-sm
       sm:text-lg md:text-xl">
