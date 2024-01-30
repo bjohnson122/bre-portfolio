@@ -24,7 +24,7 @@ export default function Contact() {
 
   return (
     <div
-      className="sm:h-[70vh] lg:h-[90vh] bg-[#6352ff08] w-screen overflow-hidden h-[fit] pb-28 sm:pb-0 "
+      className="sm:h-[70vh] lg:h-[90vh] w-screen overflow-hidden h-[fit] pb-28 sm:pb-0 "
       id="contact"
       ref={ref}
     >

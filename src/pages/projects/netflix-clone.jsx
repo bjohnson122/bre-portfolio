@@ -1,6 +1,6 @@
 export default function PocketNYC() {
   return (
-    <div className="h-screen sm:m-16 m-6 mt-16">
+    <div className="h-screen sm:m-16 m-6 mt-16 ">
       <h1 className="text-center text-5xl font-bold mb-4 tracking-wide">
         Netflix Clone
       </h1>
