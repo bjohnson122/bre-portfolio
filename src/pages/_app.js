@@ -8,7 +8,9 @@ export default function App({ Component, pageProps }) {
     <div>
       <div>
           <Layout>
-            <Component className="h-screen w-screen bg-[#6352ff1a]" {...pageProps} />
+            <Component className="h-screen w-screen" 
+            // bg-[#6352ff1a]
+             {...pageProps} />
           </Layout>
       </div>
     </div>

@@ -3,7 +3,7 @@ import PortfolioProjects from "@/components/Work/PortfolioProjects";
 
 export default function Projects() {
   return (
-    <div id="projects" className="bg-[#6352ff08]">
+    <div id="projects">
       <PortfolioProjects />
 
     </div>

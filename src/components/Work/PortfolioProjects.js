@@ -22,9 +22,9 @@ const shownProjects = [
     title: "Netflix Clone",
     img: netflixCloneScreenshot,
     description:
-      'Created with technologies including React, Redux, and Firebase, this Netflix clone features real data from The Movie Database(TMDB)!',
+      'This Netflix clone features real data from The Movie Database(TMDB) and was created with technologies including React, Redux, and Firebase!',
     type: "React App",
-    role: "Full-Stack Web Developer",
+    role: "Full-Stack Developer",
     demoLink: "",
     projectInfoLink:"/projects/netflix-clone",
     githubLink: "https://github.com/bjohnson122/netflix-Clone-AsyncWeek",
