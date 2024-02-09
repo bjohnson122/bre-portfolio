@@ -22,7 +22,7 @@ const shownProjects = [
     title: "Netflix Clone",
     img: netflixCloneScreenshot,
     description:
-      'This Netflix clone features real data from The Movie Database(TMDB) and was created with technologies including React, Redux, and Firebase!',
+      'This Netflix clone features real data from The Movie Database (TMDB) and was created with technologies including React, Redux, and Firebase!',
     type: "React App",
     role: "Full-Stack Developer",
     demoLink: "",
@@ -52,7 +52,7 @@ export default function PortfolioProjects() {
       lg:ml-16"
       >
         <Slide duration={1000} triggerOnce={true} direction={"right"}>
-          <p className="text-[#6352ff] sm:mt-14 tracking-wide pr-6">
+          <p className="text-[#6352ff] sm:mt-14 tracking-wider pr-6">
             {"<Projects />"}
           </p>
         </Slide>

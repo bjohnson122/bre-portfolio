@@ -15,7 +15,7 @@ export default function About() {
       "
       >
         <Slide duration={1000} triggerOnce={true}>
-          <p className="text-[#6352ff]">{"<About />"}</p>
+          <p className="text-[#6352ff] tracking-wider">{"<About />"}</p>
         </Slide>
       </div>
       <Fade duration={1200} delay={800} triggerOnce={true}>
