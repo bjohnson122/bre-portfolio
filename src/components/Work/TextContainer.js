@@ -36,7 +36,7 @@ export default function TextContainer({
         {/* MORE INFO BUTTON*/}
       {projectInfoLink && <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 hover:opacity-90">
           <a href={projectInfoLink}>
-            More Info <LaunchOutlinedIcon className="text-sm" />
+            More Info
           </a>
         </button>}
 
