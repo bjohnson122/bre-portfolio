@@ -1,28 +1,13 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Slide, Fade } from "react-awesome-reveal";
+import React, { useState, useEffect} from "react";
+import { Slide } from "react-awesome-reveal";
 import WebGallery from "./largeScreen/WebGallery";
 import MobileGallery from "./mobile/MobileGallery";
-import Summary from "./Summary";
+// import Summary from "./Summary";
 import photos from "./photos";
-import Image from "next/image";
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 
 export default function TransferSkills() {
   const [mobile, setMobile] = useState(undefined);
-  const [scrollY, setScrollY] = useState(0);
-  const [modal, setModal] = useState(false);
-  const [tempImgSrc, setTempImgSrc] = useState("");
-
-  const getImgSrcForModal = (imgSrc) => {
-    setTempImgSrc(imgSrc);
-    setModal(true);
-  };
-
-  const ontheScroll = useCallback((event) => {
-    const { pageYOffset, scrollY } = window;
-    console.log("yOffset", pageYOffset, "scrollY", scrollY);
-  }, []);
 
   useEffect(() => {
     const updateMobile = () => {
@@ -49,7 +34,7 @@ export default function TransferSkills() {
       </Slide>
 
       {/* SUMMARY TEXT */}
-      <Summary mobile={mobile} />
+      {/* <Summary mobile={mobile} /> */}
 
       {/* GALLERY CONTENT */}
       <div className="">
@@ -59,7 +44,6 @@ export default function TransferSkills() {
           <WebGallery photos={photos} />
         )}
       </div>
-     
     </div>
   );
 }
