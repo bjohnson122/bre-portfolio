@@ -1,16 +1,13 @@
 import React, { useState, useRef } from "react";
-import { Tab } from "@headlessui/react";
+import { Tab, TabGroup, TabList, TabPanels, TabPanel } from "@headlessui/react";
 import HomeIcon from "@mui/icons-material/Home";
 import { useInView } from "framer-motion";
-import Masonry from "react-responsive-masonry";
+// import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import Image from "next/image";
-import "yet-another-react-lightbox/plugins/captions.css";
-import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Captions from "yet-another-react-lightbox/plugins/captions";
-import "yet-another-react-lightbox/plugins/captions.css";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -56,9 +53,9 @@ export default function WebGallery({ photos }) {
   ];
   return (
     <div className="mt-6 pt-6 wrapper">
-      <Tab.Group>
+      <TabGroup>
         {/* TAB TITLES */}
-        <Tab.List
+        <TabList
           className=" relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-3 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden pt-2  rounded-b-none pb-2 justify-between 
         pl-8"
         >
@@ -81,16 +78,16 @@ export default function WebGallery({ photos }) {
               </Tab>
             );
           })}
-        </Tab.List>
+        </TabList>
 
         {/* TAB CONTENT */}
-        <Tab.Panels
+        <TabPanels
           className={`relative h-[76vh] md:h-[80vh] w-[85vw] mx-auto px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700  shadow-lg border-[#6352ff] border-4 border-t-0 
        ${isInView ? "overflow-scroll" : "overflow-hidden"}`}
         >
           {tabTitles.map((title, idx) => {
             return (
-              <Tab.Panel className="flex" key={idx}>
+              <TabPanel className="flex" key={idx}>
                 <>
                   <Lightbox
                     open={index >= 0}
@@ -101,27 +98,31 @@ export default function WebGallery({ photos }) {
                   />
                 </>
 
-                <Masonry>
-                  {pictures.map(({ imageSrc, link }, idx) => {
-                    return (
-                      <div key={idx}>
-                        <Fade>
-                          <Image
-                            src={imageSrc}
-                            alt="test"
-                            className="block cursor-pointer p-1 rounded-lg hover:opacity-95 hover:transition-opacity"
-                            onClick={() => openLightBox(idx)}
-                          />
-                        </Fade>
-                      </div>
-                    );
-                  })}
-                </Masonry>
-              </Tab.Panel>
+                {/* <ResponsiveMasonry
+                columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
+            >
+                <Masonry> */}
+                    {pictures.map(({ imageSrc, link }, idx) => {
+                      return (
+                        <div key={idx}>
+                          <Fade>
+                            <Image
+                              src={imageSrc}
+                              alt="test"
+                              className="block cursor-pointer p-1 rounded-lg hover:opacity-95 hover:transition-opacity"
+                              onClick={() => openLightBox(idx)}
+                            />
+                          </Fade>
+                        </div>
+                      );
+                    })}
+                  {/* </Masonry>
+                </ResponsiveMasonry> */}
+              </TabPanel>
             );
           })}
-        </Tab.Panels>
-      </Tab.Group>
+        </TabPanels>
+      </TabGroup>
       <div ref={ref} className="h-1 overflow-hidden"></div>
     </div>
   );

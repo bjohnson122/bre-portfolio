@@ -1,5 +1,5 @@
 import React from "react";
-import TransferSkills from "@/components/xferableSkills/TransferSkills";
+import TransferSkills from "/src/components/xferableSkills/TransferSkills";
 
 export default function Transferable() {
   return (

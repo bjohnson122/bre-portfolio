@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Tab } from "@headlessui/react";
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import HomeIcon from "@mui/icons-material/Home";
-import Masonry from "react-responsive-masonry";
+// import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Image from "next/image";
 
 import Link from "next/link";
@@ -17,7 +17,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function MobileGallery({photos}) {
+export default function MobileGallery({ photos }) {
   const [pictures, setPictures] = useState(photos);
   function filterPictures(selectedCategory) {
     const updatedPictures = photos.filter((ele) => {
@@ -35,9 +35,9 @@ export default function MobileGallery({photos}) {
 
   return (
     <div className=" h-[full] w-screen pt-12 overflow-hidden">
-      <Tab.Group>
+      <TabGroup>
         {/* TAB TITLE */}
-        <Tab.List
+        <TabList
           className="relative w-[85vw] mx-auto h-[3.75rem] grid grid-cols-4 items-center px-[6px] rounded-md  dark:bg-[#1c1c23] bg-[#080245] overflow-hidden xs:pt-2 rounded-b-none pb-2 justify-between
         "
         >
@@ -97,79 +97,88 @@ export default function MobileGallery({photos}) {
           >
             Features
           </Tab>
-        </Tab.List>
+        </TabList>
 
         {/* TAB CONTENT */}
 
-        <Tab.Panels className="relative w-[85vw] mx-auto h-[80vh] px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700 overflow-scroll border-[#6352ff] border-4 border-t-0 pt-2">
-          <Tab.Panel className="flex">
+        <TabPanels className="relative w-[85vw] mx-auto h-[80vh] px-[6px] rounded-md rounded-t-none bg-[#5a5765] dark:bg-gray-700 overflow-scroll border-[#6352ff] border-4 border-t-0 pt-2">
+          <TabPanel className="flex">
             {" "}
-            <Masonry columnsCount={2}>
-              {pictures.map(({ imageSrc }, idx) => {
-                return (
-                  <div key={idx}>
-                    <Image
-                      src={imageSrc}
-                      alt="test"
-                      className="block cursor-pointer p-1 rounded-lg"
-                    />
-                  </div>
-                );
-              })}
-            </Masonry>
-          </Tab.Panel>
-          <Tab.Panel className="flex">
-            {" "}
-            <Masonry columnsCount={2}>
-              {pictures.map(({ imageSrc }, idx) => {
-                return (
-                  <div key={idx}>
-                    <Image
-                      src={imageSrc}
-                      alt="test"
-                      className="block cursor-pointer p-1 rounded-lg"
-                    />
-                  </div>
-                );
-              })}
-            </Masonry>
-          </Tab.Panel>
-          <Tab.Panel className="flex">
-            {" "}
-            <Masonry columnsCount={2}>
-              {pictures.map(({ imageSrc }, idx) => {
-                return (
-                  <div key={idx}>
-                    <Image
-                      src={imageSrc}
-                      alt="test"
-                      className="block cursor-pointer p-1 rounded-lg"
-                    />
-                  </div>
-                );
-              })}
-            </Masonry>
-          </Tab.Panel>
-          <Tab.Panel className="flex">
-            {" "}
-            <Masonry columnsCount={2}>
-              {pictures.map(({ imageSrc, link }, idx) => {
-                return (
-                  <div key={idx}>
-                    <Link href={link} target="_blank" rel="noopener noreferrer">
+            {/* <ResponsiveMasonry>
+              <Masonry columnsCount={2}> */}
+                {pictures.map(({ imageSrc }, idx) => {
+                  return (
+                    <div key={idx}>
                       <Image
                         src={imageSrc}
                         alt="test"
                         className="block cursor-pointer p-1 rounded-lg"
                       />
-                    </Link>
-                  </div>
-                );
-              })}
-            </Masonry>
-          </Tab.Panel>
-        </Tab.Panels>
-      </Tab.Group>
+                    </div>
+                  );
+                })}
+              {/* </Masonry>{" "}
+            </ResponsiveMasonry> */}
+          </TabPanel>
+          <TabPanel className="flex">
+            {/* <ResponsiveMasonry>
+              <Masonry columnsCount={2}> */}
+                {pictures.map(({ imageSrc }, idx) => {
+                  return (
+                    <div key={idx}>
+                      <Image
+                        src={imageSrc}
+                        alt="test"
+                        className="block cursor-pointer p-1 rounded-lg"
+                      />
+                    </div>
+                  );
+                })}
+              {/* </Masonry>
+            </ResponsiveMasonry> */}
+          </TabPanel>
+          <TabPanel className="flex">
+            {/* <ResponsiveMasonry>
+              <Masonry columnsCount={2}> */}
+                {pictures.map(({ imageSrc }, idx) => {
+                  return (
+                    <div key={idx}>
+                      <Image
+                        src={imageSrc}
+                        alt="test"
+                        className="block cursor-pointer p-1 rounded-lg"
+                      />
+                    </div>
+                  );
+                })}
+              {/* </Masonry>
+            </ResponsiveMasonry> */}
+          </TabPanel>
+          <TabPanel className="flex">
+            {/* <ResponsiveMasonry>
+              <Masonry columnsCount={2}> */}
+                {pictures.map(({ imageSrc, link }, idx) => {
+                  return (
+                    <div key={idx}>
+                      <Link
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src={imageSrc}
+                          alt="test"
+                          className="block cursor-pointer p-1 rounded-lg"
+                        />
+                      </Link>
+                    </div>
+                  );
+                })}
+              {/* </Masonry>
+            </ResponsiveMasonry> */}
+          </TabPanel>
+        </TabPanels>
+      </TabGroup>
     </div>
   );
 }
