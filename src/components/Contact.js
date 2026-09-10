@@ -9,6 +9,7 @@ import {
   useInView,
   useSpring,
 } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 export default function Contact() {
   const { scrollYProgress } = useScroll();
@@ -52,6 +53,10 @@ export default function Contact() {
           href="https://www.linkedin.com/in/breanaj/"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => {
+            console.log(`LinkedIn Click`);
+            track(`LinkedIn Click`);
+          }}
         >
           <LinkedIn className="" />
         </a>
@@ -59,6 +64,7 @@ export default function Contact() {
           href="mailto:brecjohnson@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => track(`Email Contact Click`)}
         >
           <MailOutline />
         </a>
@@ -66,6 +72,7 @@ export default function Contact() {
           href="https://github.com/bjohnson122/"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => track(`Github Contact Click`)}
         >
           <GitHub />
         </a>

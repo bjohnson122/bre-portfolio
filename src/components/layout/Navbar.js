@@ -8,7 +8,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import MobileNav from "./MobileNav";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Link from "next/link";
-
+import { track } from "@vercel/analytics";
 const links = [
   {
     href: "/#about",
@@ -119,7 +119,14 @@ function Navbar() {
         {links.map((link, idx) => {
           return (
             <li className="md:pt-1" key={idx}>
-              <a href={link.href}>{link.title}</a>
+              <a
+                href={link.href}
+                onClick={() => {
+                  track(`${link?.title} Click`);
+                }}
+              >
+                {link.title}
+              </a>
             </li>
           );
         })}
@@ -148,6 +155,9 @@ top-0 left-0
                 href={socialSite.webLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  track(`${socialSite?.title} Click`);
+                }}
               >
                 {socialSite.component}
                 <br /> {socialSite.title}

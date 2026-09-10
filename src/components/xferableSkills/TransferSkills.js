@@ -7,7 +7,6 @@
 // import Image from "next/image";
 // import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
-
 // export default function TransferSkills() {
 //   const [mobile, setMobile] = useState(undefined);
 //   const [scrollY, setScrollY] = useState(0);
@@ -59,7 +58,7 @@
 //           <WebGallery photos={photos} />
 //         )}
 //       </div>
-     
+
 //     </div>
 //   );
 // }
