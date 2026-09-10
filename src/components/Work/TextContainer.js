@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import LaunchOutlinedIcon from "@mui/icons-material/LaunchOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { track } from "@vercel/analytics";
 
 export default function TextContainer({
   title,
@@ -38,11 +39,11 @@ export default function TextContainer({
           <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 hover:opacity-90">
             <a
               href={projectInfoLink}
-              onClick={() =>
+              onClick={() => {
                 track(`${title} Click`, {
                   location: `${title} project info button`,
-                })
-              }
+                });
+              }}
             >
               More Info
             </a>
@@ -53,11 +54,11 @@ export default function TextContainer({
         <button className="bg-[#6352ff] text-sm sm:text-base p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 mb-4  hover:opacity-90">
           <a
             href={githubLink}
-            onClick={() =>
+            onClick={() => {
               track(`${title} Click`, {
                 location: `${title} GitHub click`,
-              })
-            }
+              });
+            }}
           >
             <GitHubIcon /> GitHub
           </a>
