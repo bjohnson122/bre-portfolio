@@ -34,15 +34,31 @@ export default function TextContainer({
           </button> */}
 
         {/* MORE INFO BUTTON*/}
-      {projectInfoLink && <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 hover:opacity-90">
-          <a href={projectInfoLink}>
-            More Info
-          </a>
-        </button>}
+        {projectInfoLink && (
+          <button className="bg-[#6352ff] p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 hover:opacity-90">
+            <a
+              href={projectInfoLink}
+              onClick={() =>
+                track(`${title} Click`, {
+                  location: `${title} project info button`,
+                })
+              }
+            >
+              More Info
+            </a>
+          </button>
+        )}
 
         {/* GitHub */}
         <button className="bg-[#6352ff] text-sm sm:text-base p-1 rounded-2xl px-3 shadow-xl  shadow-[#000000]/40 mb-4  hover:opacity-90">
-          <a href={githubLink}>
+          <a
+            href={githubLink}
+            onClick={() =>
+              track(`${title} Click`, {
+                location: `${title} GitHub click`,
+              })
+            }
+          >
             <GitHubIcon /> GitHub
           </a>
         </button>

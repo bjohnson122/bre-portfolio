@@ -25,7 +25,11 @@ export default function Project({
         githubLink={githubLink}
       />
       {projectInfoLink ? (
-      <Link href={`${projectInfoLink}`}>
+      <Link href={`${projectInfoLink}`}
+        onClick={() => track(`${title} Click`,{
+    location: `${img} click`,
+  })}
+      >
         <Tilt
           tiltReverse={true}
           perspective={4000}
