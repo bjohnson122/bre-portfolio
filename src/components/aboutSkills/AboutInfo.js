@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function AboutInfo() {
   const [mobile, setMobile] = useState(undefined);
@@ -24,14 +24,15 @@ export default function AboutInfo() {
           I am a full-stack software engineer that specializes in developing
           enjoyable user experiences. Javascript is my primary superpower as I
           tackle the world of the web. I leverage my{" "}
-          <Link
+          {/* <Link
             href="/transferable-skills"
             className="underline decoration-[#6352ff] underline-offset-2 decoration-[2px] "
-          >
-            artistic and graphic design
-          </Link>{" "}
+          > */}
+          artistic and graphic design
+          {/* </Link>{" "} */}
           skills to create simple, beautiful, and intuitive layouts for
-          applications and websites. When {"I'm"} not centering divs, {"you'll "}
+          applications and websites. When {"I'm"} not centering divs,{" "}
+          {"you'll "}
           find me painting, drawing, or working out.
         </p>
       </div>

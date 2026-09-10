@@ -15,7 +15,7 @@ const links = [
     title: "Technical Projects",
   },
   {
-    href: "/transferable-skills",
+    href: "/",
     title: "Non-Technical Portfolio",
   },
 ];
